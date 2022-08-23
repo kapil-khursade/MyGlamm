@@ -1,0 +1,1 @@
+// This page will temporarily prrovide js for sign&login.html will be later fused with navbar.

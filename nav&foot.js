@@ -1,0 +1,1 @@
+// This page will consist the javascript that will export the navbar and to all the page of the website.

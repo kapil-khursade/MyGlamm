@@ -1,0 +1,1 @@
+// This page will provide all the necessary js for product.html and the function mentioned on it.
