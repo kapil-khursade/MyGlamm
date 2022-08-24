@@ -4,3 +4,133 @@ save that data on local storage with key "productDetail" and them show the detai
 Once Product is added to bag save it on local storage with key "addToBag".
 This will also include the navbar and footer div with the id "navbar" and "footer" respectivly and import it from 
 nav&foot .->
+<!--  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category</title>
+    <link rel="stylesheet" href="./font.css" />
+    <style>
+        #navbar{
+            display: flex;
+            justify-content: space-around;
+        }
+        #navbar>div:last-child{
+            display: flex;
+            justify-content: space-between;
+        }
+     #category-title{
+        text-align: center;
+     }
+     #product-contianer{
+        margin: auto;
+            width: 72%;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(auto,1fr);
+            row-gap: 0.2%;
+            column-gap: 3%;
+            /* border: 1px solid red; */
+            margin-top: 0%;
+
+        }
+        #product-contianer>div{
+            text-align: center;
+            width: 95%;
+            /* border: 1px solid blueviolet; */
+            cursor: pointer;
+            vertical-align: top;
+           padding: 4% 0%;
+           box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        }
+        #product-contianer>div>img{
+          
+            width: 85%;
+            /* border: 1px solid greenyellow; */
+            margin-bottom: 4%;
+
+        }
+       
+        #product-contianer p, #product-contianer h3,#product-contianer h2{
+            text-align: left;
+            width: 85%;
+            /* border: 1px solid red; */
+            margin: auto;
+            margin-bottom: 3%;
+        }
+        #product-contianer h2
+        {
+            margin-top: 10%;
+        }
+        #Pro_desc{
+            margin: auto;
+            overflow: hidden;
+            width: 80%;
+            height: 38px;
+            color: #807f7f;
+        }
+        #product-contianer>div>div{
+            /* border: 1px solid red; */
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            gap: 2%;
+            color:#4d4d4d;
+            width: 85%;
+            margin: auto;
+            margin-bottom: 4%;
+
+        }
+        #product-contianer>div>div>img{
+            width: 7%;
+            height: 10%;
+            /* border: 1px solid red; */
+
+        }
+        #product-contianer>div>div>h3{
+            /* border: 1px solid red; */
+            margin: 0%;
+            padding: 0%;
+
+        }
+    </style>
+</head>
+<body>
+    <!-- navbar div start -->
+    <div id="navbar">
+        <input type="text" id="search" placeholder="search here" oninput="debounce(searchquery,1500)">
+        <div>
+            <button id="Lipstick" onclick="pressedbtn(Lipstick)">Lipstick</button>
+            <button id="Blush" onclick="pressedbtn(Blush)">Blush</button>
+            <button id="Mascara" onclick="pressedbtn(Mascara)">Mascara</button>
+            <button id="LipLiner" onclick="pressedbtn(LipLiner)">Lip liner</button>
+            <button id="Eyeshadow" onclick="pressedbtn(Eyeshadow)">Eyeshadow</button>
+            <button id="Bronzer" onclick="pressedbtn(Bronzer)">Bronzer</button>
+           
+        </div>
+        
+    </div>
+    <!-- navbar div end -->
+
+    <!-- product page start -->
+    <div id="category-title-div">
+        <h1 id="category-title"></h1>
+
+    </div>
+    <div id="product-contianer">
+
+
+    </div>
+    <!-- product page end -->
+
+      <!-- footer div start -->
+      <div></div>
+      <!-- footer div end -->
+    
+</body>
+</html>
+<script src="./product.js"></script>
