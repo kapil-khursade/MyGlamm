@@ -1,0 +1,67 @@
+#nav-tag{
+    text-align: center;
+    border: 1px solid red;
+
+}
+#productDetial-container{
+    margin: auto;
+    border: 1px solid red;
+    width: 70%;
+    display: flex;
+}
+#leftBox{
+    border: 1px solid green;
+    width: 43%;
+}
+#rightBox{
+    border: 1px solid green;
+    width: 57%;
+  
+}
+#test{
+    height: 2000px;
+}
+
+/* #leftBox>img{
+    width: 99%;
+    border: 1px solid red;
+    position: sticky;
+} */
+#leftBox>img {
+
+
+
+
+	/* Box */
+	height: 360.996px;
+	width: 340.586px;
+	border: 0px none rgb(0, 0, 0);
+	border-top: 0px none rgb(0, 0, 0);
+	border-right: 0px none rgb(0, 0, 0);
+	border-bottom: 0px none rgb(0, 0, 0);
+	border-left: 0px none rgb(0, 0, 0);
+	margin: 0px;
+	padding: 0px;
+	max-height: none;
+	min-height: 0px;
+	max-width: 100%;
+	min-width: 0px;
+
+	/* Positioning */
+	position: static;
+	top: auto;
+	bottom: auto;
+	right: auto;
+	left: auto;
+	float: none;
+	display: block;
+	clear: none;
+	z-index: auto;
+
+
+	/* Miscellaneous */
+	overflow: visible;
+	cursor: auto;
+	visibility: visible;
+
+}

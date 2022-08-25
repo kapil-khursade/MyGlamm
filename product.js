@@ -1,8 +1,9 @@
 // This page will provide all the necessary js for product.html and the function mentioned on it.
 
 
-let productDetailLS=JSON.parse(localStorage.getItem("productDetail"))||[];
 var categoryTitle;
+
+// function "main" for fetching data using api link with "query" argument;
 async function main(catchquery) {
     try {
         let res = await fetch(`http://makeup-api.herokuapp.com/api/v1/products.json?product_type=${catchquery}`)
@@ -11,7 +12,7 @@ async function main(catchquery) {
 
         let data = await res.json()
         console.log(data);
-        displayData(data)
+        displayData(data) //calling display data (dom) 
        
 
     } catch (err) {
@@ -19,24 +20,29 @@ async function main(catchquery) {
         console.log("err",err)
     }
 }
-let query="Lipstick";
+
 // availables tags(Blush,Bronzer,Eyebrow,Eyeshadow,Foundation,Lip_liner,Lipstick,Mascara,Nail_polish)
 // main(query) 
 
+//function for button (onlick function)
 function pressedbtn(ele)
 {
     console.log(ele.id)
     main(ele.id) //caling data using available tabs
-     categoryTitle=ele.id
-     document.getElementById("category-title").innerText=categoryTitle;
-    
+    categoryTitle=ele.id
+     
+     //heading of category
+    document.getElementById("category-title").innerText=categoryTitle;
 }
 
 
+//display data function (DOM)
 function displayData(data)
 {
     let container=document.getElementById("product-contianer")
     container.innerHTML="";
+    
+    //applying highorder function
     data.forEach(function(ele,index){
         // console.log(ele)
         let maindiv = document.createElement('div');
@@ -49,28 +55,37 @@ function displayData(data)
         desc.setAttribute("id","Pro_desc")
         desc.innerText=ele.description;
 
+        //creating div for display shade 
         let shade_div = document.createElement('div');
         let shade_icon = document.createElement('img');
+
+        //importing image from storage (image folder)
         shade_icon.src="./images/plus-icon.png";
         let shade_count = document.createElement('h3');
         shade_count.innerText=`${ele.product_colors.length} SHADES`;
 
+        //if price zero then out of stock code
         const price = document.createElement('h2');
         if(ele.price==0 || ele.price==null)
         {
-            price.innerText="OutOf Stock";
+            price.innerText="Outof Stock";
             price.style.color="red";
+            // maindiv.style.cursor="not-allowed";
         }
         else{
             price.innerText=`$${ele.price}`;
         }
+
+        //appenf all div's here
         shade_div.append(shade_icon,shade_count)
         maindiv.append(img,title,desc,shade_div,price);
         container.append(maindiv)
+       
 
-        maindiv.addEventListener("click",function(){
-           localStorage.setItem("productDetail",JSON.stringify(ele));
-           window.location.href="detail.html";
+            //collecting product details data in local storage key "productDetail" 
+            maindiv.addEventListener("click",function(){
+            localStorage.setItem("productDetail",JSON.stringify(ele));
+            window.location.href="productDetail.html";
         })
         
 
@@ -80,28 +95,36 @@ function displayData(data)
 
 
 
-
+//search quaery function
 function searchquery()
 {
+    let cat_title;
     let temp = document.querySelector('#search').value;
     console.log(temp);
     if(temp=="")
     {
         temp="Eyeshadow";
         main(temp)
-        document.getElementById("category-title").innerText=`${temp}`;
-        
+       cat_title= document.getElementById("category-title")
+       cat_title.innerText=`${temp}`;
+     
     }
     else
     {
         main(temp)
-        document.getElementById("category-title").innerText=`Search Result for "${temp}"`;
+        cat_title=document.getElementById("category-title");
+        cat_title.innerText=`Search Result for "${temp}"`;
+        cat_title.style.fontSize="20px";
+        cat_title.style.fontWeight="normal";
     }
     
+    
+
 
 }
-let id;
 
+// creating debouncing function for search functionality
+let id;
 function  debounce(fun,time){
     if(id)
     {
