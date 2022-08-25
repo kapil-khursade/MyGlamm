@@ -1,10 +1,15 @@
 // This page will provide all the necessary js for product.html and the function mentioned on it.
-
-
-var categoryTitle;
+let query=JSON.parse(localStorage.getItem("query")) || "";
+main(query)
+var categoryTitle=query;
 
 // function "main" for fetching data using api link with "query" argument;
 async function main(catchquery) {
+    
+    if(catchquery=="")
+    {
+        catchquery="Blush"
+    }
     try {
         let res = await fetch(`http://makeup-api.herokuapp.com/api/v1/products.json?product_type=${catchquery}`)
         // let res = await fetch(`https://makeup-api.herokuapp.com/api/v1/products.json`)
@@ -12,6 +17,7 @@ async function main(catchquery) {
 
         let data = await res.json()
         console.log(data);
+        document.getElementById("category-title").innerText=categoryTitle;
         displayData(data) //calling display data (dom) 
        
 
@@ -46,6 +52,7 @@ function displayData(data)
     data.forEach(function(ele,index){
         // console.log(ele)
         let maindiv = document.createElement('div');
+
         let img = document.createElement('img');
         img.src=ele.api_featured_image;
 
@@ -73,7 +80,7 @@ function displayData(data)
             // maindiv.style.cursor="not-allowed";
         }
         else{
-            price.innerText=`$${ele.price}`;
+            price.innerText=`₹${Math.floor(+(ele.price)*30)}`;
         }
 
         //appenf all div's here
@@ -85,7 +92,7 @@ function displayData(data)
             //collecting product details data in local storage key "productDetail" 
             maindiv.addEventListener("click",function(){
             localStorage.setItem("productDetail",JSON.stringify(ele));
-            window.location.href="productDetail.html";
+            window.location.href="./productDetail.html";
         })
         
 
@@ -134,5 +141,3 @@ function  debounce(fun,time){
         fun()
     }, time)
 }
-
-
