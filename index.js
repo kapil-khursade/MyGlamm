@@ -66,4 +66,75 @@ function resetDotAd(prev){
   prevDot.style.width = "7px";
 }
    
+
+// Best seller slider divs with the button function for left and right
     
+// Rihght side
+let r = 4;
+let l = 1;
+
+function bestSellerRight(){
+    if(r<8){
+      r++;
+      l++;
+      window.location.href = `#best_seller_scrol_${r}` 
+    }   
+}
+
+// left side
+function bestSellerLeft(){
+  if(l>1){
+    r--;
+    l--;
+    window.location.href = `#best_seller_scrol_${l}`
+  }
+}
+
+// appending the data to the slider product in best seller
+// http://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline
+
+
+// Fetching the data from the api
+bestSellerData();
+
+async function bestSellerData(){
+  try{
+
+    let res = await fetch('http://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline');
+    let data = await res.json();
+    console.log("data:", data[0]);
+    bestSellerDataAppend(data)
+
+  }catch(err){
+    console.log("err:", err)
+  }
+}
+
+function bestSellerDataAppend(data){
+
+  for(let a=1; a<=8; a++){
+
+    let img = document.createElement("img");
+    img.src = data[a].image_link;
+
+    let brand = document.createElement("p");
+    brand.innerText = data[a].brand;
+
+    let name = document.createElement("p");
+    name.innerText = data[a].name;
+
+    let rate = document.createElement("p");
+    if( data[a].rating!=null){
+      rate.innerText = `Ratings ${data[a].rating}` ;
+    }else{
+      rate.innerText = "Ratings 4"
+    }
+    
+
+    let price = document.createElement("h4");
+    price.innerText = `₹${Math.floor(data[a].price*30)}`
+
+    document.getElementById(`best_seller_scrol_${a}`).innerHTML = null;
+    document.getElementById(`best_seller_scrol_${a}`).append(img, brand, name, rate, price);
+  }
+}
