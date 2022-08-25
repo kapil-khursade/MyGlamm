@@ -1,8 +1,8 @@
 
 body{
-    width:70%;
+    width:72%;
     margin: auto;
-    font-family: din-2014,sans-serif;
+    font-family:sans-serif;
     margin-bottom: 20px;
 }
 #top{
@@ -89,14 +89,127 @@ font-size: 14px;
     font-size: 14px;
 }
 #rside{
-    margin-left:40px
+    margin-left:40px;
+    width:100%
 }
 
-#orderData{
+
+
+#myOrdercontainer{
     margin:30px;
     
 }
-#orderData>span{
+#myOrdercontainer>span{
     font-size: 14px;
    font-weight: 400;
+}
+#myOrdercontainer>div{
+    height:80px;
+    width:90%;
+    justify-content: space-evenly;
+    padding:30px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.image{
+    width: 150px;
+    height:100px;
+}
+#rewards{
+    display: flex;
+    width:95%;
+    height:70px;
+    margin-top: 20px;
+    padding:20px;
+    justify-content: space-between;
+    background-color: rgb(216, 150, 27);
+}
+#rewards>div{
+    display:flex;
+}
+#raw_details{
+    display: flex;
+    justify-content: space-between;
+    padding:10px
+}
+#useri{
+    width:100%
+}
+#img{
+  border: 5px solid white;
+  width :70px;
+  height: 70px;
+  border-radius: 100%;
+}
+#name{
+    color: white;
+    font-size:23px;
+    margin-top: 13px;
+    margin-left: 15px;
+}
+.type{
+    font-size: 13.5px;
+    color: white;
+}
+.text{
+    color: white;
+}
+.line{
+    border: 0.5px solid white;
+    height:60px;
+
+}
+#line2{
+    border: 0.5px solid rgb(22, 21, 21);
+    height:15px;
+    width:0px;
+    margin: 3px 10px;
+     
+}
+#lin{
+    display: flex;
+}
+#sec2{
+width:350px;
+justify-content: space-between;
+text-align: center;
+line-height: 20px;
+
+}
+.i2{
+  width: 25px;
+}
+#sec{
+    font-size: 14px;
+    font-weight:600;
+    padding:15px;
+    border-bottom: 1px solid rgb(197, 196, 196);
+}
+#sec>a{
+    margin-right: 50px;
+    
+}
+#mainadd{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.address{
+    margin:20px;
+    width:380px;
+    height:330px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    
+    padding:20px
+}
+.add{
+    width:90%
+}
+
+#addn{
+    border-bottom: 4px solid;
+    margin-bottom: 10px;
+    padding:11px;
 }

@@ -3,7 +3,7 @@
     <div>
         <img  src="https://www.myglamm.com/images/no_user_yellow.png">
     </div>
-    <div >
+    <div class="namechng">
         Alok Singh
     </div>
 </div>
@@ -21,10 +21,10 @@
             <p class="tt">MyGlammXO Circle</p>
         </p>
         <p>
-            <span href="profile.html">My Profile</span>
+            <span> <a href="profile.html">My Profile</a></span>
         </p>
         <p>
-            <span href="myOrder.html">My Orders</span>
+            <span ><a href="myOrder.html">My Orders</a></span>
         </p>
         <p>
             <span>MY SKIN PREFERENCE</span>
