@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.conatiner{
+    width:100%;
+    height: 100vh;
+    background:#3c5077;
+    display: flex;
+     align-items: center;
+    justify-content: center;
+}
+.btn{
+    margin-left: 90%;
+    margin-bottom: 40%;
+}
