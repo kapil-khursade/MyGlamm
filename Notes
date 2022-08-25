@@ -5,8 +5,12 @@ must contain the concept use for all -html, js, and css.
 
 2. Stricly No PLAGERISM.
 
+3. Each page must have the title and logo of the website, copy below code and paste it in head
+  <!-- To show the logo in the title of website -->
+   <link rel = "icon" href = "https://i.postimg.cc/sG1kG01m/My-Glamm-Logo-1.jpg" type = "image/x-icon">
+
 MEMBERS 
-1. Alok Shing
+1. Alok Singh
 2. Nitin Kumar
 3. Nitin Gautam
 4. Tarun Sao

@@ -1,1 +1,76 @@
 <!-- This Page will consist the imported navbar, imported footer, and whole home page -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy internation products</title>
+    <link rel="stylesheet" href="index.css">
+    <!-- Library for slider button icon -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- To show the logo in the title of website -->
+    <link rel = "icon" href = "https://i.postimg.cc/sG1kG01m/My-Glamm-Logo-1.jpg" type = "image/x-icon">
+    <!-- ṃessage icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+       
+</head>
+<body>
+    <div id="navbar"></div>
+
+    <div id="home_page">
+        <!-- Slider add -->
+        <div id="slider_add">
+           <img src="">
+           <button onclick="slideAdLeft()"><span class="glyphicon glyphicon-triangle-left"></span></button>
+           <button onclick="slideAdRight()"><span class="glyphicon glyphicon-triangle-right"></span></button>
+           <div>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+           </div>  
+        </div>
+
+        <!-- add banner -->
+        <div><img src="https://files.myglamm.com/site-images/original/2240x614-copy_6.jpg"></div>
+
+        <!-- Spotlight product -->
+        <div id="spotlight">
+            <div><h1>IN THE SPOTLIGHT</h1></div>
+            <div>
+                <div><img src="https://files.myglamm.com/site-images/original/700x488-avc.jpg">
+                    <div class="tootip">
+                        <h1>Flat 50% off</h1>
+                        <p>Flat 50% off</p>
+                    </div>
+                </div>
+                <div><img src="https://files.myglamm.com/site-images/original/700x488-avc_1.jpg" >
+                    <div class="tootip"><h1>Lit Liquid Matte Lipsticlk</h1>
+                    <p>Lit Liquid Matte Lipsticlk</p>
+                    </div>
+                </div>
+                <div><img src="https://files.myglamm.com/site-images/original/In-the-Spotlight-700x488.jpg">
+                    <div class="tootip"><h1>Makeup Under Rs.399</h1>
+                    <p>Makeup Under Rs.399</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gif ad -->
+        <div id="gif_ad">
+            <img src="https://files.myglamm.com/site-images/original/2240x614-C_6.gif" >
+            <img src="https://files.myglamm.com/site-images/original/2240x614-Sleek-desktop_1.gif" >
+        </div>
+    </div>
+
+    <!-- Fixed positon message icon -->
+    <div id="message_icon"><i class="fa fa-commenting-o" style="font-size:40px"></i></div>
+
+    <div id="footer"></div> 
+
+</body>
+</html>
+
+<script src="index.js"></script>
