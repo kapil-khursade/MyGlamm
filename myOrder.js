@@ -29,11 +29,11 @@ function append (data){
 // let myOrder=JSON.parse(localStorage.getItem("userData"))||[]
 
 
- let obj =[{name:"Maskara",
- api_featured_image: "https://files.myglamm.com/site-images/400x400/OTTP-(1).jpg",
-  }]
+//  let obj =[{name:"Maskara",
+//  api_featured_image: "https://files.myglamm.com/site-images/400x400/OTTP-(1).jpg",
+//   }]
 
-localStorage.setItem("myOrder",JSON.stringify(obj))
+// localStorage.setItem("myOrder",JSON.stringify(obj))
 
 
 compl=()=>{
