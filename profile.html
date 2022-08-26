@@ -14,6 +14,8 @@ nav&foot.-->
     <link rel="stylesheet" href="profile.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="./nav&foot.css" />
+ 
+
 </head>
 <div id="navbar">
           
@@ -27,14 +29,12 @@ nav&foot.-->
         </div>
     
         <div id="rside">
-            <div >
+            <div  id="rsi">
                 <div id="rewards" >
                     <div>
                         <div id="img">
                             <img id="useri" src="https://www.myglamm.com/images/no_user_yellow.png">
                         </div>
-                       
-
                       <div id="name" class="namechng">Alok Singh</div>
                    </div>
                    <div id="sec2">
@@ -90,16 +90,68 @@ nav&foot.-->
                 </div>
                 
             </div>
-             <div id="mainadd">
+            <div id="mainadd">
                 <div class="address">
-                    <div style="text-align:center">HOME</div>
+                    <div class="home">HOME</div>
                     <p class="namechng">ALOK SINGH</p>
-                    <div class="add"><p style="line-height:30px;">HN.1868, C-12 Civil lines, Mukharjinagar, NEWDELHI.</p></div>
-                    <p style="margin-top:80px ;;"><span style="font-weight:200" class="mobchng">7054269959</span> <span>|</span><span style="font-weight:200" class="emailchng"> abcd@gmail.com</span></p>
+                    <div  id="add" class="add"><p style="line-height:30px;">HN.1868, C-12 Civil lines, Mukharjinagar, NEWDELHI.</p></div>
+                    <p id="p2" ><span class="s2" class="mobchng">7054269959</span> <span>|</span><span class="s2"class="emailchng"> abcd@gmail.com</span></p>
                     <button>Edit Address</button>
                 </div>
-                <div  style="text-align:center;" class="address"><h1 style="margin-top:35% ;">+</h1><p style="margin-top:-20px;">ADD NEW ADDRESS</p></div>
-             </div> 
+
+                <div id=" containeradd">
+                    <div id="d2" class="address"><h1 class="h1" class="plus" type="submit" onclick="openpopup()">+</h1><p class="p3">ADD NEW ADDRESS</p></div>
+                    <div class="popup" id="popup">
+                        
+                        <div id="container">
+                            <div id="address-conatiner">
+                             <div id="title">
+                                <h4 id="cross">Shipping Address</h4>
+                                <div  type="button" onclick="closepopup()"><h3>X</h3></div>
+                             </div>
+                             <div class="details-div" id="div-1-details">
+                                <input type="text" id="name" placeholder="Name*">
+                                <input type="number" id="number" placeholder="Mobile No." maxlength="10">
+                                <input type="email" id="email" placeholder="Enter Email">
+                             </div>
+                             <div class="details-div" id="div-2-details">
+                                <select name="Others" class="div-2-inputs" id="address-type">
+                                    <option value="other">Other</option>
+                                    <option value="home">Home</option>
+                                    <option value="office">Office</option>
+                                </select>
+                                <input class="div-2-inputs" type="text" id="flat" placeholder="Flat No./ House No./Apt No.">
+                                <input class="div-2-inputs" type="text" id="street" placeholder="Street Name*">
+                                <input class="div-2-inputs" type="text" id='neighbour'placeholder="Neighbourhood*">
+                                
+                            </div>
+                            <div class="details-div" id="div-3-details">
+                                <input type="number" id="pincode" placeholder="Pincode*">
+                                <input type="text" id="city" placeholder="City">
+                                <input type="text" id="state" placeholder="State">
+                                <input type="text" id="landmark" placeholder="Landmark">
+                    
+                            </div>
+                            <div id="check-box">
+                                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                                <label for="vehicle1"> Mark as Default</label>
+                    
+                            </div>
+                            <div id="btn">
+                                <button class="btn2" id="back">BACK</button>
+                                <button class="btn2" id="continue">SAVE</button>
+                            </div>
+                          
+                        </div>
+                    
+                        </div>
+                        
+                    </div>
+                </div>
+            </div> 
+
+
+         
         </div>
        
     </div>
