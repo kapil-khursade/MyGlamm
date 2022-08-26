@@ -51,7 +51,7 @@ function displayDetails(data)
     let discout_price = document.querySelector('#discout_price');
     let original_price = document.querySelector('#original_price');
 
-        if(data.price==0 || data.price==null)
+         if(data.price==0 || data.price==null)
         {
             discout_price.innerText="Outof Stock";
             discout_price.style.color="red";
@@ -69,6 +69,7 @@ function displayDetails(data)
             original_price.innerText=`₹${original+(+final_price)}`
         
         }
+
 
         let mrp = document.querySelector('#mrp');
        

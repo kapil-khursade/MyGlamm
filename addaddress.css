@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: larger;
+}
+#container{
+    height: 424px;
+    width: 100%;
+   margin-top: 10px;
+    border: 1px solid lightgray;
+}
+#address-conatiner{
+    width:70%;
+    height: 424px;
+    box-shadow: rgb(204,204,204) 0px 0px 10px 2px;
+    margin: auto;
+    text-align: center;
+    padding-top: 8px;
+    
+}
+#title{
+    height: 36px;
+    width:95%;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 17.6px;
+    /* background-color: aqua; */
+    margin: auto;
+    border-bottom: 1px solid lightgray;
+    
+    
+
+}
+ .details-div{
+    height: 58px;
+    width: 95%;
+    /* border: 1px solid red; */
+    margin: auto;
+    margin-top: 10px;
+    display: flex;
+ }
+ .details-div>input{
+    height:56px;
+    width:30%;
+    margin: auto;
+    background-color: #f7f7f7;
+    font-size: 16px;
+    padding-left: 10px;
+    border: none;
+ }
+#div-2-details{
+    font-size: 16px;
+}
+#div-2-details>.div-2-inputs{
+    width:23%;
+
+}
+select{
+    background-color: #f7f7f7;
+    font-size: 16px;
+    padding-left: 3px;
+    width:20%;
+    margin-left: 20px;
+    border: none;
+
+}
+input:hover{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    /* box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;; */
+}
+#pincode{
+    /* padding-left: 16px; */
+    background-color: #f7f7f7;
+    font-size: 16px;
+    padding-left: 3px;
+    width:20%;
+    margin-left: 20px;
+    border: none;
+}
+#div-3-details>input{
+    width:23%;
+    background-color: #f7f7f7;
+    font-size: 16px;
+    border: none;
+
+}
+#check-box{
+    width:95%;
+    height: 30px;
+    /* border: 1px solid greenyellow; */
+    margin: auto;
+    margin-top: 8px;
+    font-size: 15px;
+    color: rgb(101, 100, 100);
+    padding-left: 80%;
+    padding-top:2px;
+}
+#btn{
+    height:50px;
+    margin: auto;
+    width:95%;
+    /* border: 1px solid  blue; */
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+button{
+    /* margin-top: 20px; */
+    font-size: 16px;
+    height:50px;
+    width:160px;
+    margin-left: 20px;
+    border: none;
+    background-color: #c8cace;
+    color: #909090;
+    cursor: pointer;
+}
+
+#back{
+    background-color: #f7f7f7;
+}

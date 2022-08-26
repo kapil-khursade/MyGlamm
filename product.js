@@ -57,10 +57,10 @@ function displayData(data)
         img.src=ele.api_featured_image;
 
         let title = document.createElement('h3');
-        title.innerText=ele.name;
+        title.innerText=ele.brand;
         let desc = document.createElement('p');
         desc.setAttribute("id","Pro_desc")
-        desc.innerText=ele.description;
+        desc.innerText=ele.name;
 
         //creating div for display shade 
         let shade_div = document.createElement('div');
@@ -69,15 +69,17 @@ function displayData(data)
         //importing image from storage (image folder)
         shade_icon.src="./images/plus-icon.png";
         let shade_count = document.createElement('h3');
+        if(ele.product_colors.length>0){
         shade_count.innerText=`${ele.product_colors.length} SHADES`;
+        }else{
+        shade_count.innerText=`2 SHADES`;  
+        }
 
         //if price zero then out of stock code
         const price = document.createElement('h2');
         if(ele.price==0 || ele.price==null)
         {
-            price.innerText="Outof Stock";
-            price.style.color="red";
-            // maindiv.style.cursor="not-allowed";
+            price.innerText="₹499";
         }
         else{
             price.innerText=`₹${Math.floor(+(ele.price)*30)}`;

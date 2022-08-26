@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in</title>
+    
+    <link rel="stylesheet" href="./font.css" />
+    <link rel="stylesheet" href="addaddress.css" />
+</head>
+<body>
+    <div id="container">
+        <div id="address-conatiner">
+         <div id="title">
+            <h4>Shipping Address</h4>
+         </div>
+         <div class="details-div" id="div-1-details">
+            <input type="text" id="name" placeholder="Name*">
+            <input type="number" id="number" placeholder="Mobile No." maxlength="10">
+            <input type="email" id="email" placeholder="Enter Email">
+
+         </div>
+         <div class="details-div" id="div-2-details">
+            <select name="Others" class="div-2-inputs" id="address-type">
+                <option value="other">Other</option>
+                <option value="home">Home</option>
+                <option value="office">Office</option>
+            </select>
+            <input class="div-2-inputs" type="text" id="flat" placeholder="Flat No./ House No./Apt No.">
+            <input class="div-2-inputs" type="text" id="street" placeholder="Street Name*">
+            <input class="div-2-inputs" type="text" id='neighbour'placeholder="Neighbourhood*">
+            
+        </div>
+        <div class="details-div" id="div-3-details">
+            <input type="number" id="pincode" placeholder="Pincode*">
+            <input type="text" id="city" placeholder="City">
+            <input type="text" id="state" placeholder="State">
+            <input type="text" id="landmark" placeholder="Landmark">
+
+        </div>
+        <div id="check-box">
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+            <label for="vehicle1"> Mark as Default</label>
+
+        </div>
+        <div id="btn">
+            <button id="back">BACK</button>
+            <button id="continue">CONTINUE</button>
+        </div>
+      
+    </div>
+
+    </div>
+    
+</body>
+</html>
