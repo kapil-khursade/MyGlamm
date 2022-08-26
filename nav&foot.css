@@ -1,40 +1,244 @@
+#navbar {
+    margin: -10px -5px 10px -5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 0;
+}
+
+#navbar>div:first-child {
+    background-color: #FEE8E8;
+    padding: 0;
+    margin: 0;
+}
+
+#navbar>div:first-child>div {
+    margin: auto;
+    margin-top: -10px;
+    padding: 0;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid; */
+}
+
+#navbar>div:nth-child(2) {
+    margin: 10px auto;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#navbar>div:nth-child(2)>div:last-child {
+    width: 10%;
+}
+
+#navbar>div:nth-child(2)>div {
+    width: 90%;
+    margin: auto;
+    /* border: 1px solid; */
+}
+
+#navbar>div:nth-child(2)>div>input {
+    width: 50%;
+    padding-left: 10px;
+}
+
+#navbar>div:nth-child(2)>div>img,
+#navbar>div:nth-child(2)>div>input {
+    height: 35px;
+}
+
+#navbar>div:nth-child(2)>div,
+#navbar>div:nth-child(1)>div>div,
+#navbar>div:nth-child(2)>div>div {
+    display: flex;
+    gap: 20px;
+    /* border: 1px solid; */
+}
+
+#navbar>div:nth-child(3) {
+    width: 70%;
+    margin: 10px auto;
+    padding: 0px;
+    display: flex;
+    justify-content: start;
+    /* border: 1px solid; */
+}
+
+.dropdown {
+    padding-bottom: 2px;
+    /* padding: 0 15px 0 15px; */
+    /* border: 1px solid; */
+}
+
+.dropdown>p {
+    margin: 0;
+    /* border: 1px solid; */
+    padding: 10px 15px;
+}
+
+.dropdown>p:hover {
+    border-bottom: 3px solid #FF9797;
+    margin-bottom: -10px;
+}
+
+.options {
+    display: flex;
+    border: 1px solid;
+    width: 70%;
+    background-color: white;
+    position: absolute;
+    left: 15%;
+    top: 141px;
+    z-index: 1;
+    display: none;
+    padding: 20px;
+    min-height: 40vh;
+}
+
+.dropdown:hover .options {
+    display: flex;
+    justify-content: start;
+    /* How to dim everything else during this event?*/
+    /* gap: 10px; */
+}
+
+.options>div {
+    width: 50%;
+
+}
+
+.options>div:first-child {
+    justify-content: space-between;
+}
+
+.dropdown:nth-child(3)>.options>div:first-child {
+    width: 20%;
+
+}
+
+.dropdown:nth-child(3)>.options>div:last-child {
+    display: flex;
+    width: 80%;
+    gap: 20px;
+}
+
+.dropdown:nth-child(3)>.options>div:last-child>div {
+    width: 25%;
+    border: 1px solid lightgray;
+}
+
+.dropdown:nth-child(3)>.options>div:last-child>div>img {
+    width: 100%;
+}
+
+.dropdown:nth-child(4)>.options>div {
+    display: block;
+}
+
+.dropdown:nth-child(5)>.options>div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.dropdown:nth-child(5)>.options>div>div:last-child {
+    width: 20%;
+    border: 1px solid lightgray;
+}
+
+.dropdown:nth-child(5)>.options>div:last-child>div>img {
+    width: 100%;
+    margin-top: 0;
+}
+
+.dropdown:nth-child(6)>.options>div:first-child {
+    width: 20%;
+
+}
+
+.dropdown:nth-child(6)>.options>div:last-child {
+    display: flex;
+    width: 80%;
+    gap: 20px;
+}
+
+.dropdown:nth-child(6)>.options>div:last-child>div {
+    width: 25%;
+    border: 1px solid lightgray;
+}
+
+.dropdown:nth-child(6)>.options>div:last-child>div>img {
+    width: 100%;
+}
+
+.options>div:first-child {
+    display: flex;
+    justify-content: start;
+    gap: 40px;
+    /* padding-left: 20px; */
+}
+
+.nav_1_heading {
+    color: #FFAFAF;
+    font-weight: 600;
+    margin-bottom: -5px;
+}
+
+.nav_1_heading~p {
+    margin-bottom: -5px;
+}
+
 #footer {
     width: 100%;
     /* margin: auto; */
     padding: 0;
+
 }
 
 #footer>div {
     margin: auto;
-    width: 75%;
+    width: 70%;
     padding: 0;
     display: flex;
+    gap: 10px;
+    /* border: 1px solid; */
+
+}
+
+#footer>div:first-child {
+    margin: auto;
+    /* width: 80%; */
+    /* border: 1px solid purple; */
 }
 
 .foot_1_contents {
-    width: 100%;
-    padding: 0 30px 0 0;
+    /* width: 25%; */
+    padding: 0 5px 0 0;
     margin: 0 0 10px 0;
+    /* border: 1px solid red; */
+
 
 }
 
 .foot_1_heading~li:hover {
     color: #D4A204;
+
 }
 
 .foot_1_heading~li {
-    width: 100%;
+    width: 90%;
     line-height: 20px;
     margin-bottom: 5px;
+    /* border: 1px solid blue; */
+    font-size: 12px;
 }
 
 .foot_1_heading {
     color: rgb(148, 148, 148);
     font-weight: 600;
-    width: 70px;
     margin-bottom: 10px;
-
-    /* font-size: 25px; */
+    /* border: 1px solid; */
+    font-size: 12px;
 }
 
 
@@ -62,8 +266,9 @@ ul label {
 }
 
 #app_link {
-    width: 30%;
+    width: 35%;
     padding: 0;
+    margin-top: 20px;
 }
 
 #app_link>div {
@@ -84,7 +289,7 @@ ul label {
 
 #app_link>div>div>img {
     width: 100%;
-    height: 40px;
+    height: 50px;
     padding: 0;
     margin-bottom: -5px;
 }

@@ -44,9 +44,15 @@
 /* item image */
 #product-contianer > div > img {
   width: 85%;
+  height: 255px;
   /* border: 1px solid greenyellow; */
   margin-bottom: 4%;
 }
+
+#product-contianer > div >img:hover {
+
+}
+
 
 /* item decription, title, price shared common property */
 #product-contianer p,
