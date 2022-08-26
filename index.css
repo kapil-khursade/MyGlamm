@@ -1,0 +1,424 @@
+/* Background color */
+#home_page{
+    background-color: rgb(244,245,245);
+}
+
+/* Add banner settimeout css */
+#slider_add{
+    width: 100%;
+}
+
+#slider_add img{
+    width: 100%;
+}
+
+/* Buttons on the slider add banner and moving right side button to far right of screen */
+#slider_add button{
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 100%;
+    background-color: white;
+    position: relative;
+    top: -225px;
+}
+
+#slider_add button:nth-child(2){
+   right: -25px;
+}
+
+#slider_add button:nth-child(3){
+    right: -1250px;
+}
+
+/* Indicator dots of the slider ad */
+.dot {
+    height: 7px;
+    width: 7px;
+    background-color: #bbb;
+    border-bottom-left-radius: 3.5px;
+    border-top-left-radius: 3.5px;
+    border-bottom-right-radius: 3.5px;
+    border-top-right-radius: 3.5px;
+  }
+  #slider_add div:nth-child(4){
+    width: 100px;
+    margin: auto;
+    margin-top: -15px;
+    height: 20px;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+
+  /* Add banner */
+  #slider_add+div{
+    width: 1024;
+    margin: 20 auto 20 auto;
+    height: auto;
+  }
+
+  #slider_add+div>img{
+    width: 100%;
+  }
+
+  /* Ṣpotlight itmes */
+#spotlight{
+    width: 1120px;
+    margin: auto;
+    height: 400px;
+    margin-top: 80px;
+}
+
+#spotlight>div:first-child{
+    width: max-content;
+    height:auto;
+    margin: auto;
+    padding: 0 0.5% 0 0.5%;
+    background-image: linear-gradient(rgb(244,245,245), rgb(244,245,245), rgb(250,187,187));
+}
+
+#spotlight>div:first-child>h1{
+    font-size: 24px;
+    font-weight: 600;
+    margin: -2px;
+}
+
+#spotlight>div:nth-child(2){
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    margin-top: 25px;
+}
+
+#spotlight>div:nth-child(2)>div{
+    width: 347px;
+    height: 242px;
+    cursor: pointer;
+}
+
+#spotlight>div:nth-child(2)>div>img{
+    width: 100%;
+}
+
+/* Tootip when hower over will rise */
+.tootip{
+    width: 100%;
+    height: 60px;
+    position: relative;
+    background-color: rgba(288, 288, 288, 0.7);
+    bottom: 80px;
+    /* display: flex;
+    align-content: center;
+    justify-content: center; */
+}
+
+/* hower functionality of the tootip */
+#spotlight>div:nth-child(2)>div:hover>.tootip{
+    height: 170px;
+    top: -190px;
+}
+
+.tootip>h1{
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    height: max-content;
+    color: black;
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* subtext in the tooltip */
+.tootip>p{
+    text-align: center;
+    font-weight: 600;
+    display: none;
+}
+
+#spotlight>div:nth-child(2)>div:hover>.tootip>p{
+    display: inherit;
+}
+
+/* Giff adds */
+#gif_ad{
+    width: 1024px;
+    margin: auto;
+    margin-top: -25px;
+}
+
+#gif_ad>img{
+    width: 100%;
+    cursor: pointer;
+}
+
+#gif_ad>img:first-child{
+    margin-bottom: 20px;
+}
+
+
+/* fixed  message icon */
+#message_icon{
+    width: 60px;
+    height: 60px;
+    border-radius: 100px;
+    background-color: #FF9696;
+    position: fixed;
+    top: 575px;
+    left: 1275px;
+    padding-top: 0.6%;
+    padding-left: 0.8%;
+    color: white;
+    cursor: pointer;
+}
+
+/* Bank Partner */
+#bank_part{
+    width: 1120px;
+    margin: auto;
+    margin-top: 50px;
+    text-align: center;
+}
+ 
+#bank_part>div:nth-child(1){
+    width: max-content;
+    height:auto;
+    margin: auto;
+    padding: 0 0.5% 0 0.5%;
+    background-image: linear-gradient(rgb(244,245,245), rgb(244,245,245), rgb(250,187,187));
+    margin-bottom: 50px;
+}
+ 
+#bank_part>div:nth-child(1)>h3{
+    font-size: 24px;
+    font-weight: 600;
+}
+ 
+#bank_part>div:nth-child(2){
+    display: flex;
+    justify-content: space-between;
+}
+ 
+#bank_part>div:nth-child(2)>div{
+   width: 347px;
+   height: 152px;
+   margin-bottom: 25px;
+   background-color: white;
+}
+ 
+#bank_part>div:nth-child(2)>div>img{
+    width: 100%;
+}
+ 
+#bank_part>div:nth-child(2)>div>h3{
+    font-size: 16px;
+    font-weight: 600;
+}
+ 
+#bank_part>div:nth-child(2)>div>p{
+    font-size: 14px;
+}
+ 
+ 
+/* Best seller scroller */
+#best_seller{
+    width: 1120px;
+    margin: auto;
+    height: auto;
+}
+ 
+#best_seller>div:first-child{
+    width: max-content;
+    height:auto;
+    margin: auto;
+    padding: 0 0.5% 0 0.5%;
+    background-image: linear-gradient(rgb(244,245,245), rgb(244,245,245), rgb(250,187,187));
+    margin-bottom: 50px;    
+}
+ 
+#best_seller>div:nth-child(1)>h3{
+    font-size: 24px;
+    font-weight: 600;
+}
+ 
+#best_seller_scroll{
+    display: grid;
+    grid-template-columns: repeat(8, 250px);
+    grid-template-rows: 520px;
+    column-gap: 40px;
+    width: 1120px;
+    height: 450px; 
+    scroll-behavior: smooth;
+    overflow: hidden;
+}
+ 
+#best_seller>div:nth-child(2)>div{
+    padding: 5%;
+    text-align: center;
+    font-weight: 600;
+    background-color: white;
+    border-radius: 5px;
+}
+
+/* Best seller buttons */
+#best_seller>button{
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 100%;
+    background-color: rgba(288, 288, 288, 0.5);
+    position: relative;
+    top: -230px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#best_seller>button:last-child{
+    left: 1050px;
+}
+
+#best_seller>button:nth-child(3){
+    left: -10px
+}
+
+/* Hover poping effect to the best selling divs */
+#best_seller_scroll>div:hover{
+    width: 260px;
+    /* height: 605px; */
+    cursor: pointer;
+    top: -5px;
+    bottom: -5px;
+    right: 5px;
+}
+
+/* indside of best selling div */
+#best_seller>div:nth-child(2)>div>img{
+    width: 100%;
+}
+
+/* Essential Budget Items */
+#budget_buys{
+    width: 1120px;
+    margin: auto;
+    height: 400px;
+    margin-top: 80px;
+}
+
+#budget_buys>div:first-child{
+    width: max-content;
+    height:auto;
+    margin: auto;
+    padding: 0 0.5% 0 0.5%;
+    background-image: linear-gradient(rgb(244,245,245), rgb(244,245,245), rgb(250,187,187));
+}
+
+#budget_buys>div:first-child>h3{
+    font-size: 24px;
+    font-weight: 600;
+    margin: -2px;
+}
+
+#budget_buys>div:nth-child(2){
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    margin-top: 25px;
+}
+
+#budget_buys>div:nth-child(2)>div{
+    width: 347px;
+    height: 242px;
+    cursor: pointer;
+}
+
+#budget_buys>div:nth-child(2)>div>img{
+    width: 100%;
+}
+
+/* Tootip when hower over will rise */
+.tootip{
+    width: 100%;
+    height: 60px;
+    position: relative;
+    background-color: rgba(288, 288, 288, 0.7);
+    bottom: 80px;
+    /* display: flex;
+    align-content: center;
+    justify-content: center; */
+}
+
+/* hower functionality of the tootip */
+#budget_buys>div:nth-child(2)>div:hover>.tootip{
+    height: 170px;
+    top: -190px;
+}
+
+.tootip>h1{
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    height: max-content;
+    color: black;
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* subtext in the tooltip */
+.tootip>p{
+    text-align: center;
+    font-weight: 600;
+    display: none;
+}
+
+#budget_buys>div:nth-child(2)>div:hover>.tootip>p{
+    display: inherit;
+}
+
+/* SHOP FROM CATEGORIES */
+#shop_from_cate{
+    width: 1120px;
+    height: auto;
+    margin: auto;
+    margin-top: -50px;
+}
+
+#shop_from_cate>div:first-child{
+    width: max-content;
+    height:auto;
+    margin: auto;
+    padding: 0 0.5% 0 0.5%;
+    background-image: linear-gradient(rgb(244,245,245), rgb(244,245,245), rgb(250,187,187)); 
+}
+
+#shop_from_cate>div:first-child>h3{
+    font-size: 24px;
+    font-weight: 600;
+    margin: -2px;
+}
+
+#shop_from_cate>div:nth-child(2){
+    width: 100%;
+    height: 160px;
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 160px;
+}
+
+#shop_from_cate>div:nth-child(2)>div{
+    text-align: center;
+}
+
+#shop_from_cate>div:nth-child(2)>div>p{
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+#shop_from_cate>div:nth-child(2)>div>img{
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    border: 5px solid white;
+    cursor: pointer;
+}

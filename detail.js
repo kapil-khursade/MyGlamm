@@ -1,1 +1,0 @@
-// Will provide all the js required for detail.html
