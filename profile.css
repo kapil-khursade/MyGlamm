@@ -1,5 +1,5 @@
 
-body{
+#bod{
     width:72%;
     margin: auto;
     font-family:sans-serif;
@@ -14,7 +14,7 @@ body{
 
 }
 
-img{
+.imge{
     width:37px
 }
 
@@ -127,7 +127,8 @@ font-size: 14px;
     margin-top: 20px;
     padding:20px;
     justify-content: space-between;
-    background-color: rgb(216, 150, 27);
+    background-image: url(https://www.myglamm.com/images/bg-my-profile.png);
+    background-size:cover;
 }
 #rewards>div{
     display:flex;
