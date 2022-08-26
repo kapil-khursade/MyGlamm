@@ -47,7 +47,7 @@
     </div>
     <h3 class="h3">Or copy and share with your contacts</h3>
     <p id="d">Experience MyGlamm's newage makeup products, crafted in Europe<br><b class="color-gold">https://myglamm.in/FmymW9sgOjb?rc=ALOK2056</b></p>
-    <button type="button" id="btn">Copy Text</button>
+    <button type="button">Copy Text</button>
 </div>`)
  }
 
