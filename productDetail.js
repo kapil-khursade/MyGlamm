@@ -27,9 +27,7 @@ function displayDetails(data)
     let price = document.createElement('h2');
         if(data.price==0 || data.price==null)
         {
-            price.innerText="Outof Stock";
-            price.style.color="red";
-            // maindiv.style.cursor="not-allowed";
+            price.innerText="₹499";
         }
         else{
             price.innerText=`₹${Math.floor(+(data.price)*30)}`;
