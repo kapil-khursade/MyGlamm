@@ -102,11 +102,11 @@ async function bestSellerData(){
 
     let res = await fetch('http://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline');
     let data = await res.json();
-    console.log("data:", data[0]);
+    // console.log("data:", data[0]);
     bestSellerDataAppend(data)
 
   }catch(err){
-    console.log("err:", err)
+    // console.log("err:", err)
   }
 }
 
@@ -136,5 +136,28 @@ function bestSellerDataAppend(data){
 
     document.getElementById(`best_seller_scrol_${a}`).innerHTML = null;
     document.getElementById(`best_seller_scrol_${a}`).append(img, brand, name, rate, price);
+
+    // Showing the best seller data in details on productDetail.html
+    document.getElementById(`best_seller_scrol_${a}`).addEventListener("click", function(){
+      localStorage.setItem("productDetail",JSON.stringify(data[a]));
+      window.location.href="./productDetail.html";
+    })
   }
 }
+
+// Playing the brand vedio
+function playBrandVedio(){ 
+  let brandvedio = document.getElementById("brand_story_vedio");
+  if(brandvedio.muted === true){
+    brandvedio.muted = false;
+  }else{
+    brandvedio.muted = true;
+  }
+
+}
+
+// Adding the functionality to shop from categor
+
+document.querySelector("#shop_from_cate_div2").addEventListener("click", function(event){
+
+})

@@ -1,2 +1,83 @@
 <!-- This page will validate otp and move all the data of purchase from "addToBag" to "myOrder" in local
 storage -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP</title>
+    <style>
+        #box{
+            width: 350px;
+            height: 350px;
+            border: 1px solid;
+            border-radius: 10px;
+            margin: auto;
+            margin-top: 50px;
+            padding: 5%;
+        
+        }
+       
+        button{
+            margin-top: 25px;
+            background-color: black;
+            color: white;
+            width: 250px;
+            height: 40px;
+            font-size: 20px;
+            font-weight: 600;
+            margin: 80px 50px 0px 50px;
+            cursor: pointer;
+        }
+
+        input {
+           letter-spacing: 35px;
+           border: 1px solid white;
+           width: 200px;
+           height: 40px;
+           margin: 60px 75px 0px 75px;
+           border-bottom: 1px solid;
+           outline: none;
+           font-size: 20px;
+        }
+
+        #timer{
+            width: 60px;
+            height: 30px;
+            background-color: rgb(172, 166, 166);
+            border-radius: 15px;
+            margin: 20px 160px 0px 140px;
+            font-size: 18px;
+            font-weight: 600;
+            padding-top: 5px;
+            padding-left: 16px;
+        }
+        #timer>div{
+            width: 140%;
+            height: 120%;
+            position: relative;
+            left: -18px;
+            top: -5px;
+            background-color: white;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        img{
+            margin-left: 30%;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div><img src="https://www.myglamm.com/images/mob-otp.png" alt=""></div>
+        <input id="inputOtp" maxlength="4">
+        <div id="timer"></div>
+        <button onclick="verfyOtp()">Verify</button>
+    </div>
+    
+</body>
+</html>
+<script src="otp.js"></script>
