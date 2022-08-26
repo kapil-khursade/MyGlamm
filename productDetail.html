@@ -14,6 +14,10 @@ nav&foot . -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Detail</title>
     <link rel="stylesheet" href="./productDetail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" 
+    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 
@@ -22,7 +26,6 @@ nav&foot . -->
 <body>
     <!-- navbar div start -->
     <div>
-
     </div>
     <!-- navbar div end -->
 
@@ -37,6 +40,7 @@ nav&foot . -->
                 / <span id="current_page"></span>
             </p>
         </div>
+        <hr id="hr-line">
        
         <!-- div for navigation tags end -->
 
@@ -44,12 +48,73 @@ nav&foot . -->
         <div id="productDetial-container">
 
             <!-- left side containe product image -->
-            <div id="leftBox"></div>
+            <div id="leftBox">
+              
+            </div>
 
             <!-- right side containe product all details -->
-            <div id="rightBox"></div>
+            <div id="rightBox">
 
-          
+                <div id="rating_div">
+                    <p id="rating"></p>
+                    <i class="fa-solid fa-star"></i>
+                    <p>|</p>
+                    <p id="number-of-rating"></p>
+                </div>
+
+                <div id="price_div">
+                    <div id="discout_price"></div>
+                    <div id="original_price"></div>
+                </div>
+
+                <p id="mrp">(MRP incl. of all taxes)</p>
+
+                <div id="shades-div">
+                    <p>Shade |</p>
+                    <select name="" id="select_shade"></select>
+                </div>
+
+                <div id="shade_color-div"></div>
+
+                <div id="addToCart-div">
+                   <button id="addToCart"><span class="material-symbols-rounded"> shopping_bag </span>ADD TO BAG</button>
+                   <p>FREE GIFT ON PURCHASE!</p>
+                </div>
+
+                <div id="cashback-title">
+                    You will receive cashback worth ₹69 as myglamm POINTS on this purchase
+                </div>
+                
+                <div id="excusive-offer-div">
+                    <img src="./images/exclusive_offers.jpg" alt="" id="exclusive-offer-img">
+                    <div class="offers_details">
+                        <img src="https://files.myglamm.com/site-images/original/offer-2.png" alt="">
+                        <span>Get Upto 50% OFF. Select a coupon code on checkout.</span>
+                    </div>
+                    <div class="offers_details">
+                        <img src="https://files.myglamm.com/site-images/original/offer-2.png" alt="">
+                        <span>Get up to ₹150 Cashback in Mobikwik. on a minimum purchase of ₹250
+                        </span>
+                    </div>
+                    <div class="offers_details">
+                        <img src="https://files.myglamm.com/site-images/original/offer-2.png" alt="">
+                        <span>Get 20% Cashback in Simpl Upto Rs.200, No Minimum Order Value.
+                        </span>
+                    </div>
+                    <div class="offers_details">
+                        <img src="https://files.myglamm.com/site-images/original/offer-2.png" alt="">
+                        <span>Earn Good Points on this purchase
+                        </span>
+                    </div>
+                    <p id="description-title">description</p>
+                    <div id="description"></div>
+                </div>
+                <div id="write-review">
+                    <h2>Review this product</h2>
+                    <p>Share your thoughts with everyone</p>
+                    <button>WRITE A REVIEW</button>
+                </div>
+            </div>
         </div>
 
         <!-- productDetail container tags end -->
