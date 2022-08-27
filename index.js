@@ -159,5 +159,6 @@ function playBrandVedio(){
 // Adding the functionality to shop from categor
 
 document.querySelector("#shop_from_cate_div2").addEventListener("click", function(event){
-
+   localStorage.setItem("query", event.target.innerText);
+   window.location.href = "./product.html";
 })

@@ -148,7 +148,7 @@ font-size: 14px;
   height: 70px;
   border-radius: 100%;
 }
-#name{
+#namer{
     color: white;
     font-size:23px;
     margin-top: 13px;
@@ -196,10 +196,10 @@ line-height: 20px;
     margin-right: 50px;
     
 }
-#mainadd{
+#mainaddr{
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    
+    height:auto;    
 }
 .address{
     margin:20px;
@@ -296,46 +296,50 @@ line-height: 20px;
      background: #fff;
      position: absolute;
     /* top: 50%; */
-     bottom:0;
+     top:120%;
      margin-left: 10%;
-     margin-bottom: -5%;
+     margin-bottom: -7%;
      left: 40%;
      /* border: 1px solid red; */
+     box-shadow: 0 10px 0 600vh rgba(0, 0, 0, 0.4);
      transform: translate(-50%,-50%) scale(0.1);
      visibility:hidden;
      text-align: center;
-     border-radius: 6px;
+     border-radius: 10px;
      color:#333;
-     transition:transform 0.4s,bottom 0.4s
+     transition:transform 0.4s, top 0.4s
      }
      .openpopup{
      visibility:visible;
-     bottom: 5%;
+     top : 50%;
      transform: translate(-50%,-50%) scale(1);
      }
 
 
     #container{
-        height: 424px;
+        height: 430px;
         width: 100%;
        margin-top: 10px;
-        border: 1px solid lightgray;
+        border: 1px solid gray;
         margin: 0;
         padding: 0;
         box-sizing: border-box;
         font-size: larger;
+        /* border:1px solid green; */
+        border-radius: 5px;
     }
     #address-conatiner{
         width:100%;
-        height: 415px;
-        box-shadow: rgb(204,204,204) 0px 0px 10px 2px;
+        height: 419px;
+        /* box-shadow: rgb(204,204,204) 0px 0px 10px 2px; */
         margin: auto;
         text-align: center;
         padding-top: 8px;
         /* border:1px solid green; */
+        border-radius: 10px;
     }
     #title{
-        width:95%;
+        width:99%;
         font-size: 16px;
         font-weight: 700;
         line-height: 17.6px;
@@ -401,7 +405,7 @@ line-height: 20px;
     
     }
     #check-box{
-        width:95%;
+        /* width:95%; */
         height: 30px;
         /* border: 1px solid greenyellow; */
         margin: auto;
@@ -411,6 +415,8 @@ line-height: 20px;
         padding-left: 80%;
         padding-top:2px;
     }
+    
+
     #btn{
         height:50px;
         margin: auto;
@@ -439,7 +445,22 @@ line-height: 20px;
     #cross{
         padding: 0px 40%;
     }
+    
    #name{
      font-size: 17px;
      margin-top: -1px;
    }
+   
+   .bt{
+    padding:10px;
+    color: white;
+    background-color: black;
+   }
+   .spanc{
+    font-weight: 200;
+   }
+   #p2{
+    line-height: 10px;
+    ;
+   }
+  
