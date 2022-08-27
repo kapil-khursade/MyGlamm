@@ -1,2 +1,256 @@
 <!-- Once the checout is clicked this page will show the total price and number of itmes. This page will take
 user adress and other details. -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- down arrow in the profile -->
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <!-- To show the logo in the title of website -->
+     <link rel = "icon" href = "https://i.postimg.cc/sG1kG01m/My-Glamm-Logo-1.jpg" type = "image/x-icon">
+    <title>Checkout</title>
+    <style>
+        #header{
+            width: 100%;
+            height: 72px;
+            position: fixed;
+            z-index: 1;
+            top: -0px;
+            left: -1px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            background-color: white;
+            display: flex;
+        }
+        #header>div{
+            width: 1120px;
+            height: 72px;
+            margin: auto;
+            display: flex;
+        }
+        #header>div>img{
+            width: 147px;
+            height: 40px;
+            margin-top: 15px;
+            margin-left: 15px;
+        }
+
+        /* Progress bar */
+        #progress{
+            width: 500px;
+            height: 10px;
+            display: flex;
+            background-image: linear-gradient(to right, black, black, black, rgb(199, 199, 199), rgb(199, 199, 199) );
+            margin-top: 30px;
+            margin-left: 50px;
+        }
+        .progress_circle{
+            position: relative;
+            left: -150px;
+            top: -7px;
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+            border: 5px solid black;
+            background-color: white;
+            margin-left: 145px;
+        }
+        .progress_circle>p{
+            font-size: 10px;
+            position: relative;
+            top: -30px;
+            left: -8px;
+        }
+
+        /* profile */
+        #profile{
+            width: 100px;
+            height: 72px;
+            display: flex;
+            margin-left: 240px;
+        }
+        #profile>img{
+            width: 20px;
+            height: 20px;
+            margin-top: 20px;
+        }
+        #profile>p{
+            margin-top: 20px;
+            margin-left: 10px;
+        }
+        #profile>i{
+           margin-top: 20px; 
+           margin-left: 20px;
+           cursor: pointer;
+        }
+
+        /* Dropdown when clicked on the down arrow */
+        ul{
+            visibility: hidden;
+            width: 100px;
+            height: 164px;
+            border-radius: 5px;
+            font-size: 13px;
+            background-color: white;
+            line-height: 30px;
+            position: relative;
+            left: -100px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+        li{
+            margin-left: -20px;
+            font-family: sans-serif;
+        }
+        a{
+            color: black;
+            text-decoration: none;
+        }
+        ul>button{
+            width: 100%;
+            height: 25px;
+            margin-left: -20px;
+            border: none;
+            border-radius: 5px;
+        }
+
+
+        #main{
+            width: 1120px;
+            height: auto;
+            margin: 100px auto;
+        }
+        #main>h1{
+            text-align: center;
+            font-size: 24px;
+            font-family: sans-serif;
+            font-weight: 100;
+        }
+
+        #ordersummary{
+            width: 400px;
+            height: auto;
+            background-color: rgb(247,246,246);
+            margin: auto;
+            padding: 2%;
+        }
+        #ordersummary h6{
+            font-size: 24px;
+            margin-top: -10px;
+            margin-bottom: 15px;
+        }
+        #ordersummary>div:nth-child(2){
+            display: flex;
+            justify-content: space-between;
+        }
+        #ordersummary>input{
+            width: 280px;
+            height: 50px;
+            outline: none;
+        }
+        #ordersummary>button{
+            width: 110px;
+            height: 50px;
+            position: relative;
+            left: -5px;
+            background-color: black;
+            color: white;
+            font-weight: 600;
+        }
+        #ordersummary>div:nth-child(6){
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            font-weight: 600;
+        }
+        #ordersummary>button:nth-child(7){
+            width: 380px;
+            margin-top: 20px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        #main p{
+            text-align: center;
+        }
+        /* fixed  message icon */
+        #message_icon{
+            width: 60px;
+            height: 60px;
+            border-radius: 100px;
+            background-color: #FF9696;
+            position: fixed;
+            top: 575px;
+            left: 1275px;
+            padding-top: 0.6%;
+            padding-left: 0.8%;
+            color: white;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div>
+            <img src="https://files.myglamm.com/site-images/original/MyGlamm-Logo_1.jpg" alt="">
+            <div id="progress">
+                <div class="progress_circle"><p>BAG</p></div>
+                <div class="progress_circle"><p>ADDRESS</p></div>
+                <div class="progress_circle"><p>CHECKOUT</p></div>
+                <div class="progress_circle"><p>PAYMENT</p></div>
+            </div>
+            <div id="profile">
+                <img src="https://www.myglamm.com/images/no_user_yellow.png" alt="">
+                <p>Name</p>
+                <i class="fa fa-caret-down">
+                    <ul id="profile_drop">
+                        <li type="none"><a href="profile.html">My Profile</a></li>
+                        <li type="none"><a href="myOrder.html">My Orders</a></li>
+                        <li type="none"><a href="myDashboard.html">My Dashboard</a></li>
+                        <li type="none"><a href="myGlamm.html">My GlamXO Party</a></li>
+                        <button>Logout</button>
+                    </ul>
+                </i>
+            </div>
+        </div>    
+    </div>
+
+    <div id="main">
+        <!-- Main Body -->
+        <h1>Checkout</h1>
+        <div>
+            <h6>YOUR ORDER</h6>
+            <hr>
+            <div id="checkout_bag"></div>
+        </div>
+        <div id="ordersummary">
+             <h6>Order Summary</h6>
+             <div>MRP <span id="summary_mrp">Rs100</span></div>
+             <h4>Apply Promo Code</h4>
+                <input type="text" placeholder="Apply Promo Code">
+                <button>Apply</button>
+             <div>Amount Playable <span id="summary_payable">Rs100</span></div>
+             <button onclick="proceedToPayment()">PROCEED TO PAYMENT</button>
+        </div>
+        <hr>
+        <p>Ⓒ MyGlam</p>
+    </div>
+    <div id="message_icon"><i class="fa fa-commenting-o" style="font-size:40px"></i></div>
+</body>
+</html>
+
+<script>
+    document.querySelector("#profile>i").addEventListener("click", function(){
+        document.getElementById("profile_drop").style.visibility="visible"
+    });
+
+    document.querySelector("#main").addEventListener("click", function(){
+        document.getElementById("profile_drop").style.visibility = "hidden"
+    });
+
+    // Proceeding to payment
+    function proceedToPayment(){
+        window.location.href = "./payment.html"
+    }
+</script>

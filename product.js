@@ -1,5 +1,5 @@
 // This page will provide all the necessary js for product.html and the function mentioned on it.
-let query=JSON.parse(localStorage.getItem("query")) || "";
+let query=(localStorage.getItem("query")) || "";
 main(query)
 var categoryTitle=query;
 
