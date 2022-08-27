@@ -148,7 +148,7 @@ function footer() {
                 id="subscribe"
             />
             <input type="submit" value="SUBSCRIBE NOW" id="subscribe_now" />
-        </form>
+         </form>
             <div>
                 <ul type="none">
                     <li><label for="">STAY CONNECTED</label>|</li>
@@ -172,6 +172,7 @@ function footer() {
                     </li>
                 </ul>
             </div>
+            
     </div>
     <div id="app_link">
         <p>EXPERIENCE THE MYGLAMM MOBILE APP</p>
