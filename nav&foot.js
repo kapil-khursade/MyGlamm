@@ -172,6 +172,7 @@ function footer() {
                 </li>
             </ul>
             </div>
+            
 
     </div>
     <div id="app_link">
