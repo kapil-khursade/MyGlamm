@@ -1,4 +1,390 @@
 // This page will consist the javascript that will export the navbar and to all the page of the website.
+function navbar() {
+	return `<div>
+    <div>
+        <div>
+            <img src="https://www.myglamm.com/images/gift.svg" alt="" />
+            <p>FLAT 199 Store</p>
+            <p>SHOP NOW</p>
+        </div>
+        <div>
+            <img src="https://www.myglamm.com/images/shop.svg" alt="" />
+            <p>MyGlamm Store</p>
+        </div>
+    </div>
+</div>
+<div>
+    <div>
+        <img
+            src="https://files.myglamm.com/site-images/original/MyGlamm-Logo_1.jpg"
+            alt=""
+        />
+        <div>
+            <form action="">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input
+                    type="text"
+                    placeholder="Find Lipstick, Eyeliner etc"
+                    id="search"
+                />
+            </form>
+        </div>
+    </div>
+    <div>
+        <div>
+            <span class="material-symbols-rounded"> shopping_bag </span>
+        </div>
+        <div id="userProfile">
+            <div>
+                <span class="material-symbols-rounded" onclick="openPopup()">
+                    person_filled
+                </span>
+            </div>
+            <div class="userOptions">
+                <p>My Profile</p>
+                <p>My Orders</p>
+                <p>My Dashboard</p>
+                <p>MyGlammXO Party</p>
+                <button onclick="logout()">Logout</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <div class="dropdown">
+        <p><a href="./nav&foot.html"> HOME </a></p>
+    </div>
+    <div class="dropdown">
+        <p>MAKEUP</p>
+        <div class="options">
+            <div>
+                <div class="nav_1_contents">
+                    <h5 class="nav_1_heading">LIPS</h5>
+                    <p>Lipstick</p>
+                    <p>Liquid Lipstick</p>
+                    <p>Hi-Shine Lipstick</p>
+                    <p>Matte Lipstick</p>
+                    <p>Lip Gloss</p>
+                    <p>Lip Liner</p>
+                    <p>Lip Balm</p>
+                    <p>Lip Glitter</p>
+                    <p>Lip Stain</p>
+                    <p>Lipstick Set</p>
+                    <p>Lip Kit</p>
+                    <p>Find Your Lipstick</p>
+                </div>
+                <div class="nav_1_contents">
+                    <h5 class="nav_1_heading">FACE</h5>
+                    <p>Fixing Powder</p>
+                    <p>Primer</p>
+                    <p>Concealer</p>
+                    <p>Foundation</p>
+                    <p>Compact Powder</p>
+                    <p>Setting Powder</p>
+                    <p>Banana Powder</p>
+                    <p>Sindoor</p>
+                    <p>Highlighter</p>
+                    <p>Blush</p>
+                    <p>Bronzer</p>
+                    <p>Cheek Stain</p>
+                </div>
+                <div class="nav_1_contents">
+                    <h5 class="nav_1_heading">EYES</h5>
+                    <p>Eye Shadow</p>
+                    <p>Eyeliner</p>
+                    <p>Eyebrows</p>
+                    <p>Glitter</p>
+                    <p>Mascara</p>
+                    <p>Kajal</p>
+                    <p>Eye Combos</p>
+                </div>
+                <div>
+                    <div class="nav_1_contents">
+                        <h5 class="nav_1_heading">NAILS</h5>
+                        <p>Nail Lacquer</p>
+                        <p>Nail Polish</p>
+                        <p>Matte Nail Polish</p>
+                    </div>
+                    <div class="nav_1_contents">
+                        <h5 class="nav_1_heading">KITS AND COMBOS</h5>
+                        <p>Makeup Kits</p>
+                        <p>Bridal Makeup Kits</p>
+                        <p>Makeup Gift Sets</p>
+                    </div>
+                    <div class="nav_1_contents">
+                        <h5 class="nav_1_heading">MAKEUP ACCESSORIES</h5>
+                        <p>Makeup Brushes</p>
+                        <p>Eyeshadow Brushes</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dropdown">
+        <p>HAIR CARE</p>
+        <div class="options">
+            <div>
+                <div class="nav_1_contents" type="none">
+                    <h5 class="nav_1_heading">HAIR CARE</h5>
+                    <p>Shampoo</p>
+                    <p>Conditoner</p>
+                    <p>Hair Oil</p>
+                    <p>Serum</p>
+                    <p>Hair Mask</p>
+                    <p>Combos</p>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <img
+                        src="https://files.myglamm.com/site-images/400x400/Artboard-1-(1).jpg"
+                        alt=""
+                    />
+                    <p>MYGLAMM SUPERFOODS ONION & MORINGA SHAMPOO - 200ML</p>
+                    <p>For Hair Fall Control</p>
+                    <p>₹269 <s>₹299</s></p>
+                </div>
+                <div>
+                    <img
+                        src="https://files.myglamm.com/site-images/400x400/Artboard-1-(1).jpg"
+                        alt=""
+                    />
+                    <p>MYGLAMM SUPERFOODS ONION & MORINGA SHAMPOO - 200ML</p>
+                    <p>For Hair Fall Control</p>
+                    <p>₹269 <s>₹299</s></p>
+                </div>
+                <div>
+                    <img
+                        src="https://files.myglamm.com/site-images/400x400/Artboard-1-(1).jpg"
+                        alt=""
+                    />
+                    <p>MYGLAMM SUPERFOODS ONION & MORINGA SHAMPOO - 200ML</p>
+                    <p>For Hair Fall Control</p>
+                    <p>₹269 <s>₹299</s></p>
+                </div>
+                <div>
+                    <img
+                        src="https://files.myglamm.com/site-images/400x400/Artboard-1-(1).jpg"
+                        alt=""
+                    />
+                    <p>MYGLAMM SUPERFOODS ONION & MORINGA SHAMPOO - 200ML</p>
+                    <p>For Hair Fall Control</p>
+                    <p>₹269 <s>₹299</s></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dropdown">
+        <p>SKIN CARE</p>
+        <div class="options">
+            <div>
+                <div class="nav_1_contents">
+                    <h5 class="nav_1_heading"></h5>
+                    <p>Moisturizer</p>
+                    <p>Night Cream</p>
+                    <p>Eye Cream</p>
+                    <p>Body lotion</p>
+                    <p>Serum</p>
+                    <p>Sunscreen</p>
+                    <p>Skincare Kits</p>
+                </div>
+                <div class="nav_1_contents">
+                    <h5 class="nav_1_heading">CLEANSING PRODUCTS</h5>
+                    <p>Cleanser</p>
+                    <p>Face Wash</p>
+                    <p>Exfoliator & Scrub</p>
+                </div>
+                <div class="nav_1_contents">
+                    <h5 class="nav_1_heading">MASK</h5>
+                    <p>Sheet Mask</p>
+                    <p>Face Pack</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dropdown">
+        <p>SANITIZING CARE</p>
+        <div class="options">
+            <div>
+                <div class="nav_1_contents" type="none">
+                    <h5 class="nav_1_heading">SANITIZING CARE</h5>
+                    <p>Sanitizing Wipes</p>
+                    <p>Hand Sanitizer</p>
+                    <p>Sanitizing Kits</p>
+                    <p>Sanitizing Spray</p>
+                </div>
+                <div>
+                    <img
+                        src="https://files.myglamm.com/site-images/400x400/Germ-Shield_2.jpg"
+                        alt=""
+                    />
+                    <p>GERM SHIELD</p>
+                    <p>25 Sanitizing Wipes + 1 Moisturizing Hand Sanitizer</p>
+                    <p>₹185 <s>₹370</s></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dropdown">
+        <p>COLLECTION</p>
+        <div class="options">
+            <div>
+                <div class="nav_1_contents" type="none">
+                    <h5 class="nav_1_heading">SHOP BY COLLECTION</h5>
+                    <p>MyGlamm</p>
+                    <p>SUPERFOODS</p>
+                    <p>Treat Love Care</p>
+                    <p>Clean Beauty</p>
+                    <p>POPxo</p>
+                    <p>WIPEOUT</p>
+                    <p>GLOW Iridescent Brightening Skincare</p>
+                    <p>Manish Malhotra</p>
+                    <p>YOUTHfull</p>
+                    <p>LIT collection</p>
+                    <p>POSE</p>
+                    <p>K.Play</p>
+                    <p>Just Dropped</p>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <img
+                        src="https://files.myglamm.com/site-images/400x400/Soiree-(1).jpg"
+                        alt=""
+                    />
+                    <p>Manish Malhotra 9 in 1 Eyeshadow Palatte - Soirée</p>
+                    <p>
+                        Compact Eyeshadow Palette with 9 shades in Matte, Metallic &
+                        Foil Finishes
+                    </p>
+                    <p>₹1295 <s>₹1850</s></p>
+                </div>
+                <div>
+                    <img
+                        src="https://files.myglamm.com/site-images/400x400/GGM-(1).jpg"
+                        alt=""
+                    />
+                    <p>Glow to Glamour Shimmer and Fixing Powder</p>
+                    <p>2 in 1 Shimmer and Fixing Powder</p>
+                    <p>₹836 <s>₹1195</s></p>
+                </div>
+                <div>
+                    <img
+                        src="https://files.myglamm.com/site-images/400x400/Tom-Collins_6.jpg"
+                        alt=""
+                    />
+                    <p>MyGlamm Lit Creamy Matte Lipstick - Tom Collins</p>
+                    <p>Precision Perfect Matte Slimstick</p>
+                    <p>₹386 <s>₹595</s></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dropdown">
+        <p>REWARDS</p>
+        <div class="options"></div>
+    </div>
+    <div class="dropdown">
+        <p>MYGLAMM STUDIO</p>
+        <div class="options">
+            <div>
+                <div class="nav_1_contents" type="none">
+                    <h5 class="nav_1_heading">STUDIO</h5>
+                    <p>Blogs</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dropdown"><p>OFFERS</p></div>
+</div>
+<div id="pop_up" class="popUp">
+    <div>
+        <div onclick="closePopup()"><i class="fa-solid fa-x"></i></div>
+    </div>
+    <p>Get 15% Good Points back on every order</p>
+    <div>
+        <img src="https://www.myglamm.com/images/myglamm-logo.png" alt="" />
+    </div>
+    <div>
+        <p>*Mobile Number</p>
+    </div>
+    <div>
+        <div>
+            <label for="">COUNRTY CODE</label><br />
+            <select name="" id="countryCode">
+                <option value="+91">IND +91</option>
+            </select>
+        </div>
+        <div>
+            <label for="">*MOBILE NUMBER</label><br />
+            <input type="tel" name="" id="newUserMobile" />
+        </div>
+    </div>
+    <div>
+        <button id="newUserSubmit">CONTINUE</button>
+        <p>By Signing up you agree to our <b> Terms & Conditions </b></p>
+    </div>
+</div>
+<div id="pop_up2" class="popUp">
+    <div>
+        <p>VERIFY YOUR MOBILE NUMBER TO COMPLETE YOUR REGISTRATION</p>
+        <div onclick="closePopup()"><i class="fa-solid fa-x"></i></div>
+    </div>
+    <p>
+        ENTER OTP SENT ON <u><span></span></u>
+        <img src="https://img.icons8.com/emoji/344/pencil-emoji.png" alt="" />
+    </p>
+    <div id="box">
+        <!-- <div>
+            <img src="https://www.myglamm.com/images/mob-otp.png" alt="" />
+        </div> -->
+        <input id="inputOtp" maxlength="4" />
+        <div id="timer"></div>
+        <!-- <button onclick="verfyOtp()">Verify</button> -->
+    </div>
+    <div>
+        <!-- <p>*Mobile Number</p> -->
+    </div>
+    <div>
+        <div>
+            <label for="">NAME</label><br />
+            <input type="text" placeholder="*Full Name" id="newUserName" />
+        </div>
+        <div>
+            <label for="">EMAIL</label><br />
+            <input type="email" placeholder="Email Address" id="newUserEmail" />
+        </div>
+    </div>
+    <div>
+        <button id="newUserVerify">VERIFY</button>
+        <!-- <p>By Signing up you agree to our <b> Terms & Conditions </b></p> -->
+    </div>
+</div>
+<div id="pop_up3" class="popUp">
+    <div>
+        <div onclick="backPopup()">
+            <i class="fa-solid fa-arrow-left"></i>
+        </div>
+        <p>VERIFY YOUR MOBILE NUMBER TO COMPLETE YOUR REGISTRATION</p>
+        <div onclick="closePopup()"><i class="fa-solid fa-x"></i></div>
+    </div>
+    <div>
+        <img src="https://www.myglamm.com/images/mob-otp.png" alt="" />
+    </div>
+    <p>
+        ENTER OTP SENT ON <u><span></span></u>
+        <img src="https://img.icons8.com/emoji/344/pencil-emoji.png" alt="" />
+    </p>
+    <div id="box">
+        <input id="inputOtp" maxlength="4" />
+        <div id="timer"></div>
+    </div>
+    <div>
+        <button id="otpVerify">VERIFY</button>
+    </div>
+</div>
+`;
+}
 
 function footer() {
 	return `<div id="footer1">
@@ -188,4 +574,4 @@ function footer() {
 </div>`;
 }
 
-export { footer };
+export { navbar, footer };
