@@ -386,6 +386,8 @@
     padding: 0;
     position: relative;
     top: 150px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 #footer>div {
