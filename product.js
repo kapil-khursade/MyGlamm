@@ -1,15 +1,13 @@
 // This page will provide all the necessary js for product.html and the function mentioned on it.
 let query=JSON.parse(localStorage.getItem("query")) || "";
+let backBTN=JSON.parse(localStorage.getItem("backBTN")) || 0;
+
 main(query)
-var categoryTitle=query;
+
 
 // function "main" for fetching data using api link with "query" argument;
 async function main(catchquery) {
     
-    if(catchquery=="")
-    {
-        catchquery="Blush"
-    }
     try {
         let res = await fetch(`http://makeup-api.herokuapp.com/api/v1/products.json?product_type=${catchquery}`)
         // let res = await fetch(`https://makeup-api.herokuapp.com/api/v1/products.json`)
@@ -17,7 +15,6 @@ async function main(catchquery) {
 
         let data = await res.json()
         console.log(data);
-        document.getElementById("category-title").innerText=categoryTitle;
         displayData(data) //calling display data (dom) 
        
 
@@ -34,17 +31,32 @@ async function main(catchquery) {
 function pressedbtn(ele)
 {
     console.log(ele.id)
-    main(ele.id) //caling data using available tabs
+    //caling data using available tabs
     categoryTitle=ele.id
      
      //heading of category
-    document.getElementById("category-title").innerText=categoryTitle;
+localStorage.setItem("query",JSON.stringify(categoryTitle));
+document.getElementById("category-title").innerText=categoryTitle;
+    main(ele.id)
 }
 
 
 //display data function (DOM)
 function displayData(data)
 {
+
+let query=JSON.parse(localStorage.getItem("query")) || "";
+
+    if(backBTN==1)
+    {
+        document.getElementById("category-title").innerText=query;
+        localStorage.setItem("backBTN",JSON.stringify("0"));
+    }
+    else
+    {
+        document.getElementById("category-title").innerText=query;
+
+    }
     let container=document.getElementById("product-contianer")
     container.innerHTML="";
     
@@ -57,10 +69,17 @@ function displayData(data)
         img.src=ele.api_featured_image;
 
         let title = document.createElement('h3');
-        title.innerText=ele.brand;
+        title.innerText=ele.name;
         let desc = document.createElement('p');
         desc.setAttribute("id","Pro_desc")
-        desc.innerText=ele.name;
+        if(ele.brand==null || ele.brand=="")
+        {
+            ele.brand=`Brand: - SUGAR`;
+        }
+        else{
+            desc.innerText=`Brand :  ${ele.brand}`;
+        }
+        
 
         //creating div for display shade 
         let shade_div = document.createElement('div');
@@ -69,17 +88,15 @@ function displayData(data)
         //importing image from storage (image folder)
         shade_icon.src="./images/plus-icon.png";
         let shade_count = document.createElement('h3');
-        if(ele.product_colors.length>0){
         shade_count.innerText=`${ele.product_colors.length} SHADES`;
-        }else{
-        shade_count.innerText=`2 SHADES`;  
-        }
 
         //if price zero then out of stock code
         const price = document.createElement('h2');
         if(ele.price==0 || ele.price==null)
         {
-            price.innerText="₹499";
+            
+            price.innerText="Outof Stock";
+            price.style.color="red";
         }
         else{
             price.innerText=`₹${Math.floor(+(ele.price)*30)}`;
@@ -93,10 +110,13 @@ function displayData(data)
 
             //collecting product details data in local storage key "productDetail" 
             maindiv.addEventListener("click",function(){
+                if(ele.brand==null || ele.brand=="")
+                {
+                    ele["brand"]="SUGAR";
+                }
             localStorage.setItem("productDetail",JSON.stringify(ele));
             window.location.href="./productDetail.html";
         })
-        
 
     });
 }
@@ -113,18 +133,19 @@ function searchquery()
     if(temp=="")
     {
         temp="Eyeshadow";
-        main(temp)
+      
        cat_title= document.getElementById("category-title")
-       cat_title.innerText=`${temp}`;
+  localStorage.setItem("query",JSON.stringify(temp));
+  main(temp)
      
     }
     else
     {
-        main(temp)
+       
         cat_title=document.getElementById("category-title");
         cat_title.innerText=`Search Result for "${temp}"`;
-        cat_title.style.fontSize="20px";
-        cat_title.style.fontWeight="normal";
+        localStorage.setItem("query",JSON.stringify(temp));
+        main(temp)
     }
     
     

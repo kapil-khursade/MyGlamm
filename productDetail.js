@@ -12,12 +12,9 @@ function displayDetails(data)
 {
   
     recentPage.innerText=data.product_type;
-    localStorage.setItem("query",JSON.stringify(data.product_type));
     currentPage.innerText=data.name;
 
-    
-
-
+  
     let img = document.createElement('img');
     img.src=data.api_featured_image;
 
@@ -77,6 +74,7 @@ function displayDetails(data)
 
 // appending shades in select tag
         let optionList = document.getElementById('select_shade');
+
         let options=data.product_colors;
         for(var i = 0, l = options.length; i < l; i++){
             options[i]["value"]=options[i].colour_name;
@@ -87,7 +85,7 @@ function displayDetails(data)
           optionList.addEventListener("change",function(e){
             var selected_color=e.target.value;
             let selected_shade_value=selected_color;
-            localStorage.setItem("selected_color",JSON.stringify(selected_color));
+            localStorage.setItem("selected_color",selected_color);
           
           })
         
@@ -104,7 +102,7 @@ function displayDetails(data)
                 color_box.addEventListener("click",function(){
                  var  selected_color=ele.colour_name;
                  optionList.value=selected_color;
-                 localStorage.setItem("selected_color",JSON.stringify(selected_color));
+                 localStorage.setItem("selected_color",selected_color);
 
                     // color_box.style.border="2px";
                     // color_box.style.border="solid";
@@ -113,38 +111,141 @@ function displayDetails(data)
           }
 
         let cartBTN = document.querySelector('#addToCart-div');
-          const cashback_title = document.querySelector('#cashback-title');
-          const hr_line = document.querySelector('#hr-line');
-          const offer_div = document.querySelector('#excusive-offer-div');
-          const desc = document.querySelector('#description');
+          let cashback_title = document.querySelector('#cashback-title');
+          let hr_line = document.querySelector('#hr-line');
+          let offer_div = document.querySelector('#excusive-offer-div');
+          let desc = document.querySelector('#description');
                 desc.innerText=data.description;
-          const write_review = document.querySelector('#write-review');
+          let write_review = document.querySelector('#write-review');
+
+// add to cart event listner
 
           cartBTN.addEventListener("click",function(){
-            console.log(data)
+            
+            // console.log(data)
             for(let i=0 ;i<addToBagLS.length;i++)
             {
               if(addToBagLS[i].id==data.id)
               {
                 alert("Product Aledy In Cart");
+                dipslayBagData(addToBagLS)
+                document.querySelector('#display-total').innerText=`₹${cartTotalLS}`;
                 return;
               }
             }
-
-            data["selected_color"]=JSON.parse(localStorage.getItem("selected_color"));
-           
-            
+            data["pro_quantity"]="1";
+            cartTotalLS=(+cartTotalLS)+(Math.floor(+(data.price)*30));
+            data["selected_color"]=localStorage.getItem("selected_color");
             addToBagLS.push(data)
+            dipslayBagData(addToBagLS)
             localStorage.setItem("addToBag",JSON.stringify(addToBagLS));
-          })
+            localStorage.setItem("cartTotal",JSON.stringify(cartTotalLS));
+            document.querySelector('#display-total').innerText=`₹${cartTotalLS}`;
+          });
 
-let rightBox=document.getElementById("rightBox")
-rightBox.append(title,brand,rating_div,price,mrp,shades_div,shade_color_div,cartBTN,cashback_title)
-rightBox.append(offer_div,desc,write_review)
-document.getElementById("leftBox").append(img)
+    let rightBox=document.getElementById("rightBox")
+    rightBox.append(title,brand,rating_div,price,mrp,shades_div,shade_color_div,cartBTN,cashback_title)
+    rightBox.append(offer_div,desc,write_review)
+    document.getElementById("leftBox").append(img)
 
 }
 
 recentPage.addEventListener("click",function(){
+  localStorage.setItem("backBTN",JSON.stringify("1"));
     window.location.href="./product.html";
 })
+
+
+let popup = document.getElementById("popup");
+function openPopup()
+{
+  // console.log(addToBagLS);
+  // console.log("inside popup")
+ popup.classList.add("open-popup");
+}
+function closePopup()
+{
+  popup.classList.remove("open-popup");
+}
+
+function dipslayBagData(data)
+{
+  let cart_data_div = document.querySelector('#cart-data-div');
+  cart_data_div.innerHTML="";
+  document.querySelector('#bag_count').innerText=`My Bag (${addToBagLS.length})`;
+  data.forEach(function(ele,index){
+
+  let itemDiv = document.createElement('div');
+
+  let dataDiv = document.createElement('div');
+  let closeBtn = document.createElement('button');
+      closeBtn.innerText="X";
+      closeBtn.addEventListener("click",function(){
+        deleteItem(index,ele)
+      })
+
+  let img_title_div = document.createElement('div');
+  img_title_div.setAttribute("id","img_title_div")
+
+  let img = document.createElement('img');
+  img.src=ele.api_featured_image;
+  let title = document.createElement('p');
+        title.innerText=`${ele.name}:- ${ele.selected_color}`
+
+
+  let price_quty_div = document.createElement('div');
+  price_quty_div.setAttribute("id","price_quty_div")
+
+  let price = document.createElement('p');
+  price.innerText=`₹${Math.floor(+(ele.price)*30)}`;
+
+  // qty box
+  let quantity_div = document.createElement('div');
+  quantity_div.setAttribute("id","quantity_div");
+
+  const QTY_title = document.createElement('p');
+  QTY_title.innerText="QTY :- "
+
+  const minusQty = document.createElement('i');
+  minusQty.setAttribute("class","fa-solid fa-circle-minus")
+
+  const displayQty = document.createElement('p');
+  displayQty.innerText=ele.pro_quantity;
+
+  const PlusQty = document.createElement('i');
+  PlusQty.setAttribute("class","fa-solid fa-circle-plus")
+
+
+// Plus and minus button functionality
+  PlusQty.addEventListener("click",function(){
+   console.log(ele.pro_quantity)
+
+  })
+  minusQty.addEventListener("click",function(){
+
+    ele.pro_quantity=ele.pro_quantity;
+   
+  })
+
+
+  quantity_div.append(QTY_title,minusQty,displayQty,PlusQty)
+  cart_data_div.append(itemDiv)
+  itemDiv.append(dataDiv,closeBtn);
+  dataDiv.append(img_title_div,price_quty_div)
+  img_title_div.append(img,title);
+  price_quty_div.append(price,quantity_div)
+  })
+  
+}
+
+function deleteItem(index,ele)
+{
+  addToBagLS.splice(index,1);
+  localStorage.setItem("addToBag",JSON.stringify(addToBagLS));
+  console.log((ele.price)*30);
+  cartTotalLS=cartTotalLS-(Math.floor(+(ele.price)*30))
+  localStorage.setItem("cartTotal",JSON.stringify(cartTotalLS));
+  document.querySelector('#display-total').innerText=`₹${cartTotalLS}`;
+  dipslayBagData(addToBagLS)
+
+}
