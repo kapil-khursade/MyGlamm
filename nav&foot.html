@@ -10,6 +10,7 @@ the function deveoped on the nav&foot.js which will be then exported. This can b
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Navbar & Footer</title>
+		<!-- To show the logo in the title of website -->
 		<link
 			rel="icon"
 			href="https://i.postimg.cc/sG1kG01m/My-Glamm-Logo-1.jpg"
@@ -21,25 +22,23 @@ the function deveoped on the nav&foot.js which will be then exported. This can b
 			rel="stylesheet"
 			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0"
 		/>
-		<!-- To show the logo in the title of website -->
+		<script
+			src="https://kit.fontawesome.com/1bec6be586.js"
+			crossorigin="anonymous"
+		></script>
 	</head>
 	<body>
 		<div id="navbar">
 			<div>
 				<div>
 					<div>
-						<p>
-							<img src="https://www.myglamm.com/images/gift.svg" alt="" /> FLAT
-							199 Store
-						</p>
+						<img src="https://www.myglamm.com/images/gift.svg" alt="" />
+						<p>FLAT 199 Store</p>
 						<p>SHOP NOW</p>
 					</div>
 					<div>
-						<p>
-							<!-- <span class="material-symbols-rounded"> storefront </span> -->
-							<img src="https://www.myglamm.com/images/shop.svg" alt="" />
-							MyGlamm Store
-						</p>
+						<img src="https://www.myglamm.com/images/shop.svg" alt="" />
+						<p>MyGlamm Store</p>
 					</div>
 				</div>
 			</div>
@@ -49,23 +48,32 @@ the function deveoped on the nav&foot.js which will be then exported. This can b
 						src="https://files.myglamm.com/site-images/original/MyGlamm-Logo_1.jpg"
 						alt=""
 					/>
-					<input
-						type="text"
-						placeholder="Find Lipstick, Eyeliner etc"
-						id="search"
-					/>
+					<div>
+						<form action="">
+							<i class="fa-solid fa-magnifying-glass"></i>
+							<input
+								type="text"
+								placeholder="Find Lipstick, Eyeliner etc"
+								id="search"
+							/>
+						</form>
+					</div>
 				</div>
 				<div>
 					<div>
 						<span class="material-symbols-rounded"> shopping_bag </span>
 					</div>
 					<div>
-						<span class="material-symbols-rounded"> person </span>
+						<span class="material-symbols-rounded" onclick="openPopup()">
+							person_filled
+						</span>
 					</div>
 				</div>
 			</div>
 			<div>
-				<div class="dropdown"><p>HOME</p></div>
+				<div class="dropdown">
+					<p><a href="./nav&foot.html"> HOME </a></p>
+				</div>
 				<div class="dropdown">
 					<p>MAKEUP</p>
 					<div class="options">
@@ -110,24 +118,24 @@ the function deveoped on the nav&foot.js which will be then exported. This can b
 								<p>Kajal</p>
 								<p>Eye Combos</p>
 							</div>
-						</div>
-						<div>
-							<div class="nav_1_contents">
-								<h5 class="nav_1_heading">NAILS</h5>
-								<p>Nail Lacquer</p>
-								<p>Nail Polish</p>
-								<p>Matte Nail Polish</p>
-							</div>
-							<div class="nav_1_contents">
-								<h5 class="nav_1_heading">KITS AND COMBOS</h5>
-								<p>Makeup Kits</p>
-								<p>Bridal Makeup Kits</p>
-								<p>Makeup Gift Sets</p>
-							</div>
-							<div class="nav_1_contents">
-								<h5 class="nav_1_heading">MAKEUP ACCESSORIES</h5>
-								<p>Makeup Brushes</p>
-								<p>Eyeshadow Brushes</p>
+							<div>
+								<div class="nav_1_contents">
+									<h5 class="nav_1_heading">NAILS</h5>
+									<p>Nail Lacquer</p>
+									<p>Nail Polish</p>
+									<p>Matte Nail Polish</p>
+								</div>
+								<div class="nav_1_contents">
+									<h5 class="nav_1_heading">KITS AND COMBOS</h5>
+									<p>Makeup Kits</p>
+									<p>Bridal Makeup Kits</p>
+									<p>Makeup Gift Sets</p>
+								</div>
+								<div class="nav_1_contents">
+									<h5 class="nav_1_heading">MAKEUP ACCESSORIES</h5>
+									<p>Makeup Brushes</p>
+									<p>Eyeshadow Brushes</p>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -264,27 +272,30 @@ the function deveoped on the nav&foot.js which will be then exported. This can b
 									src="https://files.myglamm.com/site-images/400x400/Soiree-(1).jpg"
 									alt=""
 								/>
-								<p>GERM SHIELD</p>
-								<p>25 Sanitizing Wipes + 1 Moisturizing Hand Sanitizer</p>
-								<p>₹185 <s>₹370</s></p>
+								<p>Manish Malhotra 9 in 1 Eyeshadow Palatte - Soirée</p>
+								<p>
+									Compact Eyeshadow Palette with 9 shades in Matte, Metallic &
+									Foil Finishes
+								</p>
+								<p>₹1295 <s>₹1850</s></p>
 							</div>
 							<div>
 								<img
 									src="https://files.myglamm.com/site-images/400x400/GGM-(1).jpg"
 									alt=""
 								/>
-								<p>GERM SHIELD</p>
-								<p>25 Sanitizing Wipes + 1 Moisturizing Hand Sanitizer</p>
-								<p>₹185 <s>₹370</s></p>
+								<p>Glow to Glamour Shimmer and Fixing Powder</p>
+								<p>2 in 1 Shimmer and Fixing Powder</p>
+								<p>₹836 <s>₹1195</s></p>
 							</div>
 							<div>
 								<img
 									src="https://files.myglamm.com/site-images/400x400/Tom-Collins_6.jpg"
 									alt=""
 								/>
-								<p>GERM SHIELD</p>
-								<p>25 Sanitizing Wipes + 1 Moisturizing Hand Sanitizer</p>
-								<p>₹185 <s>₹370</s></p>
+								<p>MyGlamm Lit Creamy Matte Lipstick - Tom Collins</p>
+								<p>Precision Perfect Matte Slimstick</p>
+								<p>₹386 <s>₹595</s></p>
 							</div>
 						</div>
 					</div>
@@ -306,6 +317,36 @@ the function deveoped on the nav&foot.js which will be then exported. This can b
 				</div>
 				<div class="dropdown"><p>OFFERS</p></div>
 			</div>
+		</div>
+		<div id="pop_up" class="popUp">
+			<div>
+				<div onclick="backPopup()"><i class="fa-solid fa-x"></i></div>
+			</div>
+			<p>Get 15% Good Points back on every order</p>
+			<div>
+				<img src="https://www.myglamm.com/images/myglamm-logo.png" alt="" />
+			</div>
+			<div>
+				<p>*Mobile Number</p>
+			</div>
+			<form id="userForm">
+				<div>
+					<div>
+						<label for="">COUNRTY CODE</label><br />
+						<select name="" id="countryCode">
+							<option value="+91">IND +91</option>
+						</select>
+					</div>
+					<div>
+						<label for="">*MOBILE NUMBER</label><br />
+						<input type="tel" name="" id="newUserMobile" />
+					</div>
+				</div>
+				<div>
+					<input type="submit" value="CONTINUE" id="newUserSubmit" />
+					<p>By Signing up you agree to our <b> Terms & Conditions </b></p>
+				</div>
+			</form>
 		</div>
 		<div id="footer">
 			<!-- <div id="footer1">
@@ -502,3 +543,4 @@ the function deveoped on the nav&foot.js which will be then exported. This can b
 
 	foot.innerHTML = footer();
 </script>
+<script src="./sign&login.js"></script>

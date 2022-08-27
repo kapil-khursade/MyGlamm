@@ -1,30 +1,46 @@
 #navbar {
-    margin: -10px -5px 10px -5px;
+    position: fixed;
+    width: 100%;
+    margin: 0 -5px 10px -5px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     padding: 0;
+    top: 10px;
+    z-index: 1;
 }
 
 #navbar>div:first-child {
     background-color: #FEE8E8;
-    padding: 0;
-    margin: 0;
+    height: 45px;
+    margin-top: -10px;
 }
 
 #navbar>div:first-child>div {
     margin: auto;
-    margin-top: -10px;
-    padding: 0;
+    padding-top: 5px;
     width: 70%;
     display: flex;
     justify-content: space-between;
     /* border: 1px solid; */
 }
 
+#navbar>div:first-child>div>div>p+p {
+    font-weight: 600;
+    color: #FF9797;
+    font-size: 11px;
+    padding-top: 3px;
+}
+
+#navbar>div:first-child>div>div>img {
+    margin-right: -12px;
+}
+
 #navbar>div:nth-child(2) {
-    margin: 10px auto;
+    margin: auto;
+    padding-top: 10px;
     width: 70%;
     display: flex;
     justify-content: space-between;
+    background-color: white;
 }
 
 #navbar>div:nth-child(2)>div:last-child {
@@ -37,35 +53,62 @@
     /* border: 1px solid; */
 }
 
-#navbar>div:nth-child(2)>div>input {
-    width: 50%;
-    padding-left: 10px;
+#navbar>div:nth-child(2)>div>div>form>input {
+    width: 88%;
+    height: 30px;
+    margin: 0px auto 1px 15px;
+    background-color: #F5F5F6;
+    border: 0px solid lightgrey;
+    font-size: 13px;
+    letter-spacing: 1px;
+    outline: none;
 }
 
-#navbar>div:nth-child(2)>div>img,
-#navbar>div:nth-child(2)>div>input {
-    height: 35px;
+
+#navbar>div:nth-child(2)>div>img {
+    height: 40px;
 }
 
 #navbar>div:nth-child(2)>div,
-#navbar>div:nth-child(1)>div>div,
-#navbar>div:nth-child(2)>div>div {
+#navbar>div:nth-child(1)>div>div {
     display: flex;
     gap: 20px;
     /* border: 1px solid; */
 }
 
-#navbar>div:nth-child(3) {
-    width: 70%;
-    margin: 10px auto;
-    padding: 0px;
-    display: flex;
-    justify-content: start;
+#navbar>div:nth-child(2)>div>div {
+    width: 100%;
+}
+
+#navbar>div:nth-child(2)>div>div>form {
+    background-color: #F5F5F6;
+    width: 50%;
+    padding-left: 20px;
+    padding-top: 5px;
+    color: #AAADB7;
+    margin-left: 30px;
     /* border: 1px solid; */
 }
 
+#navbar>div:nth-child(2)>div>div>form>i {
+    font-size: 16px;
+    /* border: 1px solid; */
+}
+
+#navbar>div:nth-child(3) {
+    width: 70%;
+    margin: auto;
+    padding-top: 10px;
+    display: flex;
+    justify-content: start;
+    background-color: white;
+    /* border: 1px solid; */
+}
+
+/*DropDown CSS starts from here*/
+
 .dropdown {
-    padding-bottom: 2px;
+    padding-bottom: 3px;
     /* padding: 0 15px 0 15px; */
     /* border: 1px solid; */
 }
@@ -76,40 +119,49 @@
     padding: 10px 15px;
 }
 
+.dropdown>p>a {
+    text-decoration: none;
+    color: black;
+}
+
 .dropdown>p:hover {
     border-bottom: 3px solid #FF9797;
     margin-bottom: -10px;
 }
 
 .options {
-    display: flex;
-    border: 1px solid;
+    /* display: flex; */
+    /* border: 1px solid; */
     width: 70%;
     background-color: white;
     position: absolute;
     left: 15%;
-    top: 141px;
+    top: 131.95px;
     z-index: 1;
     display: none;
-    padding: 20px;
-    min-height: 40vh;
+    padding: 15px;
+    min-height: 30vh;
 }
 
 .dropdown:hover .options {
     display: flex;
-    justify-content: start;
-    /* How to dim everything else during this event?*/
+    /* To dim everything else during this event*/
+    box-shadow: 0 714px 0 100vh rgba(0, 0, 0, .4);
+    /* justify-content: start; */
     /* gap: 10px; */
 }
 
 .options>div {
-    width: 50%;
-
+    width: 100%;
+    /* border: 1px solid; */
 }
 
 .options>div:first-child {
-    justify-content: space-between;
+    display: flex;
+    justify-content: start;
+    gap: 80px;
 }
+
 
 .dropdown:nth-child(3)>.options>div:first-child {
     width: 20%;
@@ -158,6 +210,7 @@
 
 .dropdown:nth-child(6)>.options>div:last-child {
     display: flex;
+    justify-content: end;
     width: 80%;
     gap: 20px;
 }
@@ -171,11 +224,28 @@
     width: 100%;
 }
 
-.options>div:first-child {
-    display: flex;
-    justify-content: start;
-    gap: 40px;
-    /* padding-left: 20px; */
+.dropdown>.options>div:last-child>div>img+p {
+    font-weight: 600;
+    width: 95%;
+    height: 15px;
+    /* border: 1px solid; */
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.dropdown>.options>div:last-child>div>img+p+p {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.dropdown>.options>div:last-child>div>img~p {
+    margin-left: 10px;
+}
+
+.dropdown>.options>div:last-child>div s {
+    color: grey;
 }
 
 .nav_1_heading {
@@ -184,9 +254,131 @@
     margin-bottom: -5px;
 }
 
+.options>div:first-child {
+    margin-top: -10px;
+}
+
 .nav_1_heading~p {
     margin-bottom: -5px;
 }
+
+/*Pop Up CSS starts from here*/
+.popUp {
+    /* align-items: center; */
+    /* flex-direction: column; */
+    width: 450px;
+    height: 350px;
+    background-color: #fff;
+    border-radius: 5px;
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+    padding: 10px;
+    visibility: hidden;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    z-index: 2;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .4);
+    transition: transform 0.4s, top 0.4s;
+}
+
+.open-popup {
+    visibility: visible;
+    top: 35%;
+    transform: translate(-50%, -50%);
+}
+
+.popUp p {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.popUp>div {
+    /* border: 1px solid; */
+    width: 100%;
+    text-align: center;
+}
+
+.popUp>div:first-child {
+    display: flex;
+    justify-content: end;
+}
+
+.popUp>div:nth-child(4) {
+    width: 105%;
+    margin: 10px -10px 0 -10px;
+    border-bottom: 1px solid lightgrey;
+    padding: 0;
+    height: 25px;
+}
+
+.popUp>div:nth-child(4)>p {
+    border-bottom: 2px solid;
+    width: 22%;
+    margin: 0 0 10px 90px;
+    height: 24px;
+    padding: 0;
+    font-weight: 600;
+}
+
+.popUp img {
+    width: 50%;
+    margin-top: 20px;
+}
+
+.popUp>form>div:first-child {
+    display: flex;
+    gap: 20px;
+    padding: 0 20px;
+    margin-top: 10px;
+}
+
+.popUp>form>div:first-child>div:last-child {
+    width: 65%;
+}
+
+.popUp>form>div:first-child label {
+    font-size: 8px;
+}
+
+.popUp>form>div select {
+    width: 100px;
+    height: 35px;
+    padding: 0 5px;
+    font-weight: 600;
+    border: 1px solid lightgrey;
+}
+
+.popUp>form>div:first-child input {
+    width: 100%;
+    height: 35px;
+    padding: 0 5px;
+    border: 1px solid lightgrey;
+}
+
+.popUp>form>div:first-child label {
+    margin-left: 10px;
+    position: relative;
+    top: 5px;
+    background-color: white;
+}
+
+.popUp>form>div:last-child input {
+    margin: 20px auto auto 10%;
+    background-color: black;
+    color: white;
+    width: 80%;
+    height: 40px;
+    font-weight: 600;
+}
+
+.popUp>form>div:last-child {
+    margin-bottom: 0px;
+    /* border: 1px solid; */
+}
+
+/*CSS for Footer starts from here*/
 
 #footer {
     width: 100%;
@@ -251,17 +443,20 @@
 
 ul label {
     margin: 0 15px 0 0;
+    /* border: 1px solid; */
 }
 
-#foot_form ul {
+#foot_form+div>ul {
+    width: 100%;
     display: flex;
     gap: 10px;
+    padding: 6% 0px 0 0;
+    /* border: 1px solid; */
 }
 
 #foot_form {
     display: flex;
-    width: 70%;
-    justify-content: start;
+    width: 35%;
 }
 
 #foot_form>form>input:nth-child(2){
