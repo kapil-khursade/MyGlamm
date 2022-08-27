@@ -3,7 +3,7 @@
     <div>
         <img class="imge" src="https://www.myglamm.com/images/no_user_yellow.png">
     </div>
-    <div class="namechng">
+    <div id="nam">
         Alok Singh
     </div>
 </div>

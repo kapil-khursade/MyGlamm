@@ -54,6 +54,8 @@ nav&foot. -->
 <script type="module">
     import sidebar from "./sidebar.js"
     document.getElementById("sidebar").innerHTML=sidebar()
+    let loginData=JSON.parse(localStorage.getItem("loginData"))
+     document.getElementById("nam").innerText=loginData.name
 </script>
 <script src="myOrder.js">
 

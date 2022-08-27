@@ -35,7 +35,7 @@ nav&foot.-->
                         <div id="img">
                             <img id="useri" src="https://www.myglamm.com/images/no_user_yellow.png">
                         </div>
-                      <div id="name" class="namechng">Alok Singh</div>
+                      <div id="namer" >Alok Singh</div>
                    </div>
                    <div id="sec2">
                         <div>
@@ -65,9 +65,9 @@ nav&foot.-->
                 </div>
                 <div id="raw_details" >
                         <div id="Ph" style="font-size:14px">
-                            <a class="mobchng">8318739431</a>
+                            <a id="mobchng">8318739431</a>
                             <span>|</span>
-                            <a class="emailchng">kshatriyaalok1997@gmail.com</a>
+                            <a id="emailchng">kshatriyaalok1997@gmail.com</a>
                         </div>
                         <div id="lin">
                             <a style="font-size:14px; margin-top: 3px;">SHARE YOUR LINK</a>
@@ -91,14 +91,8 @@ nav&foot.-->
                 
             </div>
             <div id="mainadd">
-                <div class="address">
-                    <div class="home">HOME</div>
-                    <p class="namechng">ALOK SINGH</p>
-                    <div  id="add" class="add"><p style="line-height:30px;">HN.1868, C-12 Civil lines, Mukharjinagar, NEWDELHI.</p></div>
-                    <p id="p2" ><span class="s2" class="mobchng">7054269959</span> <span>|</span><span class="s2"class="emailchng"> abcd@gmail.com</span></p>
-                    <button>Edit Address</button>
-                </div>
-
+                
+               <div id="mainaddr">
                 <div id=" containeradd">
                     <div id="d2" class="address"><h1 class="h1" class="plus" type="submit" onclick="openpopup()">+</h1><p class="p3">ADD NEW ADDRESS</p></div>
                     <div class="popup" id="popup">
@@ -107,7 +101,7 @@ nav&foot.-->
                             <div id="address-conatiner">
                              <div id="title">
                                 <h4 id="cross">Shipping Address</h4>
-                                <div  type="button" onclick="closepopup()"><h3>X</h3></div>
+                                <div  type="button" onclick="closepopup()"><h2 style="color:lightgrey;font-weight:bold">X</h2></div>
                              </div>
                              <div class="details-div" id="div-1-details">
                                 <input type="text" id="name" placeholder="Name*">
@@ -116,9 +110,9 @@ nav&foot.-->
                              </div>
                              <div class="details-div" id="div-2-details">
                                 <select name="Others" class="div-2-inputs" id="address-type">
-                                    <option value="other">Other</option>
-                                    <option value="home">Home</option>
-                                    <option value="office">Office</option>
+                                    <option value="Other">Other</option>
+                                    <option value="HOME">HOME</option>
+                                    <option value="OFFICE">OFFICE</option>
                                 </select>
                                 <input class="div-2-inputs" type="text" id="flat" placeholder="Flat No./ House No./Apt No.">
                                 <input class="div-2-inputs" type="text" id="street" placeholder="Street Name*">
@@ -138,8 +132,8 @@ nav&foot.-->
                     
                             </div>
                             <div id="btn">
-                                <button class="btn2" id="back">BACK</button>
-                                <button class="btn2" id="continue">SAVE</button>
+                                <button class="btn2" id="back" onclick="closepopup()">BACK</button>
+                                <button class="btn2" id="continue" onclick="save()">SAVE</button>
                             </div>
                           
                         </div>
@@ -148,7 +142,11 @@ nav&foot.-->
                         
                     </div>
                 </div>
+               </div>
+
+               
             </div> 
+           
 
 
          
@@ -167,6 +165,8 @@ nav&foot.-->
 <script type="module">
      import sidebar from "./sidebar.js"
      document.getElementById("sidebar").innerHTML=sidebar()
+let loginData=JSON.parse(localStorage.getItem("loginData"))
+     document.getElementById("nam").innerText=loginData.name
 </script>
 <script src="profile.js"></script>
 <script type="module">
@@ -180,3 +180,4 @@ nav&foot.-->
 
 	foot.innerHTML = footer();
 </script>
+
