@@ -150,29 +150,29 @@ function footer() {
             <input type="submit" value="SUBSCRIBE NOW" id="subscribe_now" />
          </form>
             <div>
-                <ul type="none">
-                    <li><label for="">STAY CONNECTED</label>|</li>
-                    <li>
-                        <img
-                            src="https://www.myglamm.com/images/instagram.svg"
-                            alt=""
-                        />
-                    </li>
-                    <li>
-                        <img src="https://www.myglamm.com/images/twitter.svg" alt="" />
-                    </li>
-                    <li>
-                        <img
-                            src="https://www.myglamm.com/images/pinterest.svg"
-                            alt=""
-                        />
-                    </li>
-                    <li>
-                        <img src="https://www.myglamm.com/images/youtube.svg" alt="" />
-                    </li>
-                </ul>
+            <ul type="none">
+                <li><label for="">STAY CONNECTED</label>|</li>
+                <li>
+                    <img
+                        src="https://www.myglamm.com/images/instagram.svg"
+                        alt=""
+                    />
+                </li>
+                <li>
+                    <img src="https://www.myglamm.com/images/twitter.svg" alt="" />
+                </li>
+                <li>
+                    <img
+                        src="https://www.myglamm.com/images/pinterest.svg"
+                        alt=""
+                    />
+                </li>
+                <li>
+                    <img src="https://www.myglamm.com/images/youtube.svg" alt="" />
+                </li>
+            </ul>
             </div>
-            
+
     </div>
     <div id="app_link">
         <p>EXPERIENCE THE MYGLAMM MOBILE APP</p>
