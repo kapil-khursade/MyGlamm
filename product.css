@@ -26,6 +26,8 @@
   row-gap: 0.2%;
   column-gap: 3%;
   /* border: 1px solid red; */
+  margin-bottom: 350px;
+
   margin-top: 0%;
 }
 
@@ -49,9 +51,6 @@
   margin-bottom: 4%;
 }
 
-#product-contianer > div >img:hover {
-
-}
 
 
 /* item decription, title, price shared common property */
@@ -83,7 +82,7 @@
   margin: auto;
   overflow: hidden;
   width: 80%;
-  height: 34px;
+  height: 20px;
   color: #807f7f;
 }
 

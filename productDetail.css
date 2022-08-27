@@ -28,22 +28,10 @@
   /* Box */
   height: 402px;
   width: 466.656px;
-
-  /* Positioning */
   position: sticky;
-  top: 153px;
-  bottom: auto;
-  right: auto;
-  left: auto;
-  float: left;
-  display: block;
-  clear: none;
-  z-index: 999;
-
-  /* Miscellaneous */
-  overflow: visible;
-  cursor: auto;
-  visibility: visible;
+  top: 0px;
+  /* border: 1px solid green; */
+ 
 }
 
 #rightBox {
@@ -79,6 +67,7 @@
 #leftBox > img {
   box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
   width: 340.586px;
+  height:100%;
   position: static;
   /* border: 1px solid red; */
 }
@@ -550,4 +539,190 @@
   color: white;
   padding: 3% 5%;
   cursor: pointer;
+}
+
+
+
+/* Popup styling start*/
+
+.popupBox{
+  background-color: white;
+  /* border: 1px solid black; */
+  margin-top: 100px;
+  width: 440px;
+  height: 670px;
+  position: absolute;
+  top: 100px;
+  right:-500px;
+  transition: transform 0.5s,bottom 0.4s;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  /* visibility: hidden; */
+ 
+}
+.open-popup{
+  position: fixed;
+  right:-225px;
+}
+.close-popup{
+  transition: transform 0.5s,bottom 0.4s;
+}
+
+#poup-top{
+  font-family: din-2014, sans-serif;
+  /* border: 1px solid black; */
+  padding: 5% 7%;
+display: flex;
+justify-content: space-between;
+font-size: 22px;
+font-weight: 500;
+background-color: #f7f7f7;
+}
+
+#my-bag{
+  /* border: 1px solid black; */
+  width: 180px;
+}
+
+.fa-bag-shopping{
+font-size: 30px;
+margin-right: 5%;
+}
+
+#close_Btn{
+  border: 1px solid rgb(216, 216, 216);
+  background-color: transparent;
+  font-size: 25px;
+  font-weight: 600;
+  cursor: pointer;
+}
+#close_Btn:hover{
+  border: 1px solid red;
+}
+
+#cart-data-div{
+  height:380px;
+  overflow: scroll;
+  overflow-x: hidden;
+  /* border: 1px solid red; */
+}
+#congrats-banner{
+  font-family: din-2014, sans-serif;
+  font-size: 14px;
+  /* border: 1px solid greenyellow; */
+  padding: 3% 7%;
+  font-weight: 600;
+  border-top: 1px solid rgb(228, 228, 228);
+  border-bottom: 1px solid rgb(228, 228, 228);
+
+}
+
+#total-ammount-div{
+  font-family: din-2014, sans-serif;
+  /* border: 1px solid red; */
+  padding: 0% 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 500;
+}
+#display-total{
+  font-size: 26px;
+  margin: 0%;
+  
+}
+#popup-checkout-btn{
+  font-size: 25px;
+  font-family: din-2014, sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0% 7%;
+  /* border: 1px solid red; */
+color: wheat;
+background-color: black;
+cursor: pointer;
+font-weight: 600;
+}
+.fa-arrow-right-long{
+  font-size: 30px;
+}
+
+
+/* appending data in popup box */
+#cart-data-div{
+  /* border: 1px solid red; */
+  font-family: din-2014, sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 4%;
+  padding: 3.5% 6%;
+}
+#cart-data-div>div{
+  display: flex;
+  /* border: 1px solid greenyellow; */
+  width: 94%;
+  padding: 3% 4%;
+  margin-top: 2%;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+#cart-data-div>div>div{
+  /* border: 1px solid blueviolet; */
+}
+
+#cart-data-div>div>button{
+  /* border: 1px solid blueviolet; */
+  height: 20px;
+  font-size: 15px;
+  font-weight: 700;
+  background-color: transparent;
+  border:1px solid  #dfdede;
+  cursor: pointer;
+}
+#cart-data-div>div>button:hover{
+  border:1px solid  red;
+}
+
+#img_title_div{
+  display: flex;
+  gap: 3%;
+  /* border: 1px solid red; */
+  padding: 3%  4% 0% 4%;
+}
+#img_title_div>img{
+  /* border: 1px solid red; */
+  width: 25%;
+}
+#img_title_div>p{
+  /* border: 1px solid red; */
+  color: #5a5a5b;
+}
+
+#price_quty_div{
+  display: flex;
+  justify-content: space-between;
+  /* border: 1px solid rgb(0, 51, 255); */
+}
+#price_quty_div>p{
+  font-size: 18px;
+  font-weight: 600;
+  margin-left: 2%;
+  /* border: 1px solid red; */
+
+
+}
+
+/* quantity div */
+#quantity_div{
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  gap: 3%;
+  /* border: 1px solid red; */
+  width: 80%;
+
+}
+.fa-circle-plus,.fa-circle-minus{
+font-size: 20px;
+cursor: pointer;
 }
