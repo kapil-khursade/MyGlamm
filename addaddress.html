@@ -5,12 +5,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log in</title>
+    <title>Add Shipping Address</title>
     
     <link rel="stylesheet" href="./font.css" />
     <link rel="stylesheet" href="addaddress.css" />
+     <!-- Ḷinking the css of the footer -->
+     <link rel="stylesheet" href="nav&foot.css">
+      <!-- To show the logo in the title of website -->
+    <link rel = "icon" href = "https://i.postimg.cc/sG1kG01m/My-Glamm-Logo-1.jpg" type = "image/x-icon">
+     <!-- ṃessage icon library -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+    <div>
+        <!-- Here will be navbar -->
+    </div>
     <div id="container">
         <div id="address-conatiner">
          <div id="title">
@@ -51,8 +60,28 @@
         </div>
       
     </div>
-
+    <div id="message_icon"><i class="fa fa-commenting-o" style="font-size:40px"></i></div>
+    </div>
+    <div id="footer">
+        <!-- here will be the footer -->
     </div>
     
 </body>
 </html>
+
+<!-- Importing the footer -->
+<script type="module">
+	import { footer } from './nav&foot.js';
+
+	let foot = document.getElementById('footer');
+
+	foot.innerHTML = footer();
+</script>
+
+<script>
+    document.getElementById("continue").addEventListener("click", function(){
+        window.location.href = "checkout.html"
+    })
+</script>
+
+

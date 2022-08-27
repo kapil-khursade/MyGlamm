@@ -1,3 +1,270 @@
 <!-- This page will provide the payment functionality
 This will also include the navbar and footer div with the id "navbar" and "footer" respectivly and import it from 
 nav&foot . -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- down arrow in the profile -->
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <!-- To show the logo in the title of website -->
+     <link rel = "icon" href = "https://i.postimg.cc/sG1kG01m/My-Glamm-Logo-1.jpg" type = "image/x-icon">
+    <title>Payment</title>
+    <style>
+        #header{
+            width: 100%;
+            height: 72px;
+            position: fixed;
+            z-index: 1;
+            top: -0px;
+            left: -1px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            background-color: white;
+            display: flex;
+        }
+        #header>div{
+            width: 1120px;
+            height: 72px;
+            margin: auto;
+            display: flex;
+        }
+        #header>div>img{
+            width: 147px;
+            height: 40px;
+            margin-top: 15px;
+            margin-left: 15px;
+        }
+
+        /* Progress bar */
+        #progress{
+            width: 500px;
+            height: 10px;
+            display: flex;
+            background-image: linear-gradient(to right, black, black, black);
+            margin-top: 30px;
+            margin-left: 50px;
+        }
+        .progress_circle{
+            position: relative;
+            left: -150px;
+            top: -7px;
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+            border: 5px solid black;
+            background-color: white;
+            margin-left: 145px;
+        }
+        .progress_circle>p{
+            font-size: 10px;
+            position: relative;
+            top: -30px;
+            left: -8px;
+        }
+
+        /* profile */
+        #profile{
+            width: 100px;
+            height: 72px;
+            display: flex;
+            margin-left: 240px;
+        }
+        #profile>img{
+            width: 20px;
+            height: 20px;
+            margin-top: 20px;
+        }
+        #profile>p{
+            margin-top: 20px;
+            margin-left: 10px;
+        }
+        #profile>i{
+           margin-top: 20px; 
+           margin-left: 20px;
+           cursor: pointer;
+        }
+
+        /* Dropdown when clicked on the down arrow */
+        ul{
+            visibility: hidden;
+            width: 100px;
+            height: 164px;
+            border-radius: 5px;
+            font-size: 13px;
+            background-color: white;
+            line-height: 30px;
+            position: relative;
+            left: -100px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+        li{
+            margin-left: -20px;
+            font-family: sans-serif;
+            color: black;
+            text-decoration: none;
+        }
+        a{
+            color: black;
+            text-decoration: none;
+        }
+        ul>button{
+            width: 100%;
+            height: 25px;
+            margin-left: -20px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        /* main body */
+        #main{
+            width: 1120px;
+            height: auto;
+            margin: 100px auto 0px auto;
+        }
+        #payment{
+            width: 840px;
+            height: 600px;
+            margin: auto;
+        }
+        #payment>h1{
+            font-weight: 100;
+            text-align: center;
+            font-family: sans-serif;
+        }
+        #amt_payable{
+            width: 840px;
+            height: 80px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: rgb(253,248,236);
+            font-size: 24px;
+            font-weight: 600;
+            font-family: sans-serif;
+            border-radius: 5px;
+            border: 2px solid;
+            padding: 0px 10px 0px 1px;
+        }
+       #payment>div{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 25px;
+       }
+
+       #payment input{
+        height: 60px;
+        border: none;
+        outline: none;
+        background-color: rgb(247,246,246);
+        border-radius: 5px;
+       }
+       .inputLength{
+        width: 680px;
+       }
+       .inputLength2{
+        width: 80px;
+       }
+       #main p{
+        text-align: center;
+       }
+       #payment button{
+        width: 190px;
+        height: 60px;
+        background-color: black;
+        color: white;
+        margin-top: 50px;
+        margin-left: 10px;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 18px;
+        font-weight: 600;
+       }
+       /* fixed  message icon */
+        #message_icon{
+            width: 60px;
+            height: 60px;
+            border-radius: 100px;
+            background-color: #FF9696;
+            position: fixed;
+            top: 575px;
+            left: 1275px;
+            padding-top: 0.6%;
+            padding-left: 0.8%;
+            color: white;
+            cursor: pointer;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div>
+            <img src="https://files.myglamm.com/site-images/original/MyGlamm-Logo_1.jpg" alt="">
+            <div id="progress">
+                <div class="progress_circle"><p>BAG</p></div>
+                <div class="progress_circle"><p>ADDRESS</p></div>
+                <div class="progress_circle"><p>CHECKOUT</p></div>
+                <div class="progress_circle"><p>PAYMENT</p></div>
+            </div>
+            <div id="profile">
+                <img src="https://www.myglamm.com/images/no_user_yellow.png" alt="">
+                <p>Name</p>
+                <i class="fa fa-caret-down">
+                    <ul id="profile_drop">
+                        <li type="none"><a href="profile.html">My Profile</a></li>
+                        <li type="none"><a href="myOrder.html">My Orders</a></li>
+                        <li type="none"><a href="myDashboard.html">My Dashboard</a></li>
+                        <li type="none"><a href="myGlamm.html">My GlamXO Party</a></li>
+                        <button>Logout</button>
+                    </ul>
+                </i>
+            </div>
+        </div>    
+    </div>
+
+    <div id="main">
+        <!-- Main Body -->
+
+        <div id="payment">
+          <h1>Payment</h1>
+          <div id="amt_payable">Ammount Payable <span id="amt_payable_ac">Rs100</span></div>
+          <div>Card Number: <input type="number" class="inputLength" maxlength="16" placeholder="XXXX XXXX XXXX XXXX"></div>
+          <div>Card Holder Name: <input type="text" class="inputLength" placeholder="E.g Katrina Kaif"></div>
+          <div>
+            <div>Vaidity: 
+                <input type="number" class="inputLength2" maxlength="2" placeholder="MM">
+                <input type="number" class="inputLength2" maxlength="2" placeholder="YY">
+            </div>
+            <div>
+                CVV:
+                <input type="number" class="inputLength2" maxlength="3" placeholder="CVV">
+            </div>
+          </div>
+          <button onclick="getToOtp()">Pay Rs100</button>
+        </div>
+        <hr>
+        <p>Ⓒ MyGlam</p>
+    </div>
+    <div id="message_icon"><i class="fa fa-commenting-o" style="font-size:40px"></i></div>
+</body>
+</html>
+
+<script>
+    document.querySelector("#profile>i").addEventListener("click", function(){
+        document.getElementById("profile_drop").style.visibility="visible"
+    });
+
+    document.querySelector("#main").addEventListener("click", function(){
+        document.getElementById("profile_drop").style.visibility = "hidden"
+    });
+
+    function getToOtp(){
+        window.location.href = "./otp.html"
+    }
+
+</script>
