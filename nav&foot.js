@@ -172,8 +172,7 @@ function footer() {
                 </li>
             </ul>
             </div>
-            
-
+        
     </div>
     <div id="app_link">
         <p>EXPERIENCE THE MYGLAMM MOBILE APP</p>
