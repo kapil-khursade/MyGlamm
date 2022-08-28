@@ -571,7 +571,7 @@ function footer() {
 export { navbar, footer };
 
 // search functionality
-let query = localStorage.getItem('query') || '';
+let query=localStorage.getItem('query') || '';
 
 function searchquery() {
 	let cat_title;
