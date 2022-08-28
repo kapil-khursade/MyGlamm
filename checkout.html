@@ -131,7 +131,7 @@ user adress and other details. -->
         }
 
         #ordersummary{
-            width: 400px;
+            width: 420px;
             height: auto;
             background-color: rgb(247,246,246);
             margin: auto;
@@ -155,7 +155,7 @@ user adress and other details. -->
             width: 110px;
             height: 50px;
             position: relative;
-            left: -5px;
+            left: -4px;
             background-color: black;
             color: white;
             font-weight: 600;
@@ -188,6 +188,21 @@ user adress and other details. -->
             padding-left: 0.8%;
             color: white;
             cursor: pointer;
+        }
+
+        /* order summary */
+        #checkout_bag{
+        margin-bottom: 25px;
+        }
+        #checkout_bag>div{
+            display: flex;
+            width: 60%;
+            justify-content: space-between;
+            border: 0.1px solid rgb(216, 213, 213);
+            padding: 2%;
+        }
+        #checkout_bag>div>img{
+            width: 70px;
         }
 
     </style>
@@ -254,6 +269,44 @@ user adress and other details. -->
     // Proceeding to payment
     function proceedToPayment(){
         window.location.href = "./payment.html"
+    }
+
+     // Proceeding to payment
+     function proceedToPayment(){
+        window.location.href = "./payment.html"
+    }
+
+    // Showing order summery
+    let addToBag = JSON.parse(localStorage.getItem("addToBag"));
+    addToBag.forEach(function (el){
+        let card = document.createElement("div");
+
+        let img = document.createElement("img");
+        img.src = el.image_link;
+
+        let name = document.createElement("p");
+        name.innerText = el.name;
+
+        card.append(img, name);
+
+        document.getElementById("checkout_bag").append(card)
+    })
+
+    // Showing tottl
+    let cartTotal = localStorage.getItem("cartTotal")||"";
+    document.getElementById("summary_mrp").innerText = `₹ ${cartTotal}`;
+    document.getElementById("summary_payable").innerText = `₹ ${cartTotal}`;
+
+    // Get discount of 30% when applied code "masai20"
+    let promoCode = document.getElementById("promoCode").value;
+    function applyPromoCode(){
+        let promoCode = document.getElementById("promoCode").value;
+
+        if(promoCode==="masai30"){
+            cartTotal = 0.7*cartTotal;
+            document.getElementById("summary_payable").innerText = `₹ ${cartTotal}`; 
+            localStorage.setItem("cartTotal", cartTotal) 
+        }
     }
 </script>
 

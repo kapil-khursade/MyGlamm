@@ -245,7 +245,7 @@ nav&foot . -->
                 <input type="number" class="inputLength2" maxlength="3" placeholder="CVV">
             </div>
           </div>
-          <button onclick="getToOtp()">Pay Rs100</button>
+          <button id="patToOtp" onclick="getToOtp()">Pay Rs100</button>
         </div>
         <hr>
         <p>Ⓒ MyGlam</p>
@@ -266,5 +266,10 @@ nav&foot . -->
     function getToOtp(){
         window.location.href = "./otp.html"
     }
+
+    let payableAmt = localStorage.getItem("cartTotal")||"";
+
+    document.getElementById("amt_payable_ac").innerText = `Rs ${payableAmt}`
+    document.getElementById("patToOtp").innerText = `Pay Rs ${payableAmt}`
 
 </script>
