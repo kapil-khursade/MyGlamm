@@ -152,7 +152,7 @@ function displayDetails(data)
 
     recentPage.addEventListener("click",function(){
       localStorage.setItem("backBTN",JSON.stringify("1"));
-      localStorage.setItem("query",JSON.stringify("data.product_type"));
+      localStorage.setItem("query",JSON.stringify(data.product_type))
         window.location.href="./product.html";
     })
 }
