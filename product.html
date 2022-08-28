@@ -15,6 +15,8 @@ nav&foot .->
     <title>Category</title>
     <link rel="stylesheet" href="./font.css" />
     <link rel="stylesheet" href="./product.css"/>
+    <link rel="stylesheet" href="./nav&foot.css">
+
     <style>
        
     </style>
@@ -51,9 +53,18 @@ nav&foot .->
     <!-- product page end -->
 
       <!-- footer div start -->
-      <div></div>
+      <div id="footer">
+
+    </div>
       <!-- footer div end -->
     
 </body>
 </html>
 <script src="./product.js"></script>
+<script type="module">
+	import { footer } from './nav&foot.js';
+
+	let foot = document.getElementById('footer');
+
+	foot.innerHTML = footer();
+</script>

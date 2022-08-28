@@ -1,14 +1,9 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-size: larger;
-}
 #container{
     height: 424px;
     width: 100%;
-   margin-top: 10px;
-    border: 1px solid lightgray;
+    margin-top: 10px;
+    border: 0px solid lightgray;
+    margin-bottom: 50px;
 }
 #address-conatiner{
     width:70%;
@@ -19,7 +14,7 @@
     padding-top: 8px;
     
 }
-#title{
+#container #title{
     height: 36px;
     width:95%;
     font-size: 16px;
@@ -32,7 +27,7 @@
     
 
 }
- .details-div{
+#container  .details-div{
     height: 58px;
     width: 95%;
     /* border: 1px solid red; */
@@ -40,6 +35,7 @@
     margin-top: 10px;
     display: flex;
  }
+ 
  .details-div>input{
     height:56px;
     width:30%;
@@ -93,7 +89,7 @@ input:hover{
     margin-top: 8px;
     font-size: 15px;
     color: rgb(101, 100, 100);
-    padding-left: 80%;
+    padding-left: 30%;
     padding-top:2px;
 }
 #btn{
@@ -120,4 +116,19 @@ button{
 
 #back{
     background-color: #f7f7f7;
+}
+
+/* fixed  message icon */
+#message_icon{
+    width: 60px;
+    height: 60px;
+    border-radius: 100px;
+    background-color: #FF9696;
+    position: fixed;
+    top: 575px;
+    left: 1275px;
+    padding-top: 0.6%;
+    padding-left: 0.8%;
+    color: white;
+    cursor: pointer;
 }
