@@ -545,27 +545,26 @@
 
 /* Popup styling start*/
 
-.popupBox{
+.CartpopupBox{
   background-color: white;
-  /* border: 1px solid black; */
+  border: 1px solid black;
   margin-top: 100px;
   width: 440px;
   height: 670px;
   position: absolute;
-  top: 100px;
+  top:500px;
   right:-500px;
-  transition: transform 0.5s,bottom 0.4s;
+  transition: transform 0.5s,top 0.5s;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   /* visibility: hidden; */
- 
 }
-.open-popup{
+.Cartopen-popup{
+  visibility: visible;
   position: fixed;
-  right:-225px;
+  right:-4px;
+  top: -90px;
 }
-.close-popup{
-  transition: transform 0.5s,bottom 0.4s;
-}
+
 
 #poup-top{
   font-family: din-2014, sans-serif;
@@ -666,9 +665,7 @@ font-weight: 600;
   margin-top: 2%;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
-#cart-data-div>div>div{
-  /* border: 1px solid blueviolet; */
-}
+
 
 #cart-data-div>div>button{
   /* border: 1px solid blueviolet; */
