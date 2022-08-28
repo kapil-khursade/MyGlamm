@@ -52,7 +52,7 @@ function navbar() {
 </div>
 <div>
     <div class="dropdown">
-        <p><a href="./nav&foot.html"> HOME </a></p>
+        <p><a href="./index.html"> HOME </a></p>
     </div>
     <div class="dropdown">
         <p>MAKEUP</p>
