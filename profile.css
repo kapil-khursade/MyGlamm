@@ -291,28 +291,46 @@ line-height: 20px;
      border-radius: 30px;
      }
      .popup{
+        /* width: 450px;
+        height: 450px;
+        background-color: #fff;
+        border-radius: 5px;
+        position: absolute;
+        top: 500%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: auto;
+        padding: 15px;
+        visibility: hidden;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        z-index: 2;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .4);
+        transition: transform 0.4s, top 0.4s; */
      width: 80%;
      height:430px;
      background: #fff;
      position: absolute;
-    /* top: 50%; */
+   
      top:120%;
-     margin-left: 10%;
-     margin-bottom: -7%;
-     left: 40%;
-     /* border: 1px solid red; */
+      margin: auto;
+   
+     left: 50%;
+  
      box-shadow: 0 10px 0 600vh rgba(0, 0, 0, 0.4);
      transform: translate(-50%,-50%) scale(0.1);
      visibility:hidden;
      text-align: center;
      border-radius: 10px;
      color:#333;
-     transition:transform 0.4s, top 0.4s
+     transition:transform 0.4s, top 0.4s;
+     z-index:2
      }
      .openpopup{
      visibility:visible;
-     top : 50%;
+     top : 60%;
      transform: translate(-50%,-50%) scale(1);
+
+     
      }
 
 
@@ -384,7 +402,7 @@ line-height: 20px;
         border: none;
     
     }
-    input:hover{
+    .in_put:hover{
         box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
         /* box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;; */
     }
@@ -463,7 +481,12 @@ line-height: 20px;
     line-height: 10px;
     ;
    }
-  
-   body{
-    margin-top:160px;
-   }
+  body{
+    margin-top: 170px;
+  }
+  #navbar{
+    font-family: din-2014, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+  }
