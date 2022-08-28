@@ -251,3 +251,7 @@ function deleteItem(index,ele)
   dipslayBagData(addToBagLS)
 
 }
+
+document.querySelector('#popup-checkout-btn').addEventListener("click",function(){
+  window.location.href="./addaddress.html"
+})
