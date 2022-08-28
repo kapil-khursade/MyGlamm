@@ -36,16 +36,16 @@ function navbar() {
         </div>
         <div id="userProfile">
             <div>
-                <span class="material-symbols-rounded" onclick="openPopup()">
+                <span class="material-symbols-rounded" id="open_popup">
                     person_filled
                 </span>
             </div>
             <div class="userOptions">
-                <p>My Profile</p>
-                <p>My Orders</p>
-                <p>My Dashboard</p>
-                <p>MyGlammXO Party</p>
-                <button onclick="logout()">Logout</button>
+                <p><a href="./profile.html">My Profile</a></p>
+                <p><a href="./myOrder.html">My Orders</a></p>
+                <p><a href="./myDashboard.html">My Dashboard</a></p>
+                <p><a href="./myGlamm.html">MyGlammXO Party</a></p>
+                <button id="log_out">Logout</button>
             </div>
         </div>
     </div>
@@ -299,7 +299,7 @@ function navbar() {
 </div>
 <div id="pop_up" class="popUp">
     <div>
-        <div onclick="closePopup()"><i class="fa-solid fa-x"></i></div>
+        <div id="close_popup1"><i class="fa-solid fa-x"></i></div>
     </div>
     <p>Get 15% Good Points back on every order</p>
     <div>
@@ -328,22 +328,17 @@ function navbar() {
 <div id="pop_up2" class="popUp">
     <div>
         <p>VERIFY YOUR MOBILE NUMBER TO COMPLETE YOUR REGISTRATION</p>
-        <div onclick="closePopup()"><i class="fa-solid fa-x"></i></div>
+        <div id="close_popup2"><i class="fa-solid fa-x"></i></div>
     </div>
     <p>
         ENTER OTP SENT ON <u><span></span></u>
         <img src="https://img.icons8.com/emoji/344/pencil-emoji.png" alt="" />
     </p>
     <div id="box">
-        <!-- <div>
-            <img src="https://www.myglamm.com/images/mob-otp.png" alt="" />
-        </div> -->
         <input id="inputOtp" maxlength="4" />
         <div id="timer"></div>
-        <!-- <button onclick="verfyOtp()">Verify</button> -->
     </div>
     <div>
-        <!-- <p>*Mobile Number</p> -->
     </div>
     <div>
         <div>
@@ -357,16 +352,15 @@ function navbar() {
     </div>
     <div>
         <button id="newUserVerify">VERIFY</button>
-        <!-- <p>By Signing up you agree to our <b> Terms & Conditions </b></p> -->
     </div>
 </div>
 <div id="pop_up3" class="popUp">
     <div>
-        <div onclick="backPopup()">
+        <div id="back_popup">
             <i class="fa-solid fa-arrow-left"></i>
         </div>
         <p>VERIFY YOUR MOBILE NUMBER TO COMPLETE YOUR REGISTRATION</p>
-        <div onclick="closePopup()"><i class="fa-solid fa-x"></i></div>
+        <div id="close_popup3"><i class="fa-solid fa-x"></i></div>
     </div>
     <div>
         <img src="https://www.myglamm.com/images/mob-otp.png" alt="" />
@@ -376,8 +370,8 @@ function navbar() {
         <img src="https://img.icons8.com/emoji/344/pencil-emoji.png" alt="" />
     </p>
     <div id="box">
-        <input id="inputOtp" maxlength="4" />
-        <div id="timer"></div>
+        <input id="inputOtp1" maxlength="4" />
+        <div id="timer1"></div>
     </div>
     <div>
         <button id="otpVerify">VERIFY</button>

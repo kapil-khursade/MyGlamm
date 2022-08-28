@@ -2,7 +2,7 @@
 let otp;
 let inputOtp;
 let inputOtp1;
-// showCountdownTimer();
+showCountdownTimer();
 
 function showOtp() {
 	otp = 9999 - Math.ceil(Math.random() * 1000);
@@ -10,16 +10,26 @@ function showOtp() {
 	showCountdownTimer();
 }
 
+// let timer = document.getElementById('timer');
+// timer.addEventListener('click', function () {
+// 	showOtp();
+// });
+
+// let timer1 = document.getElementById('timer1');
+// timer1.addEventListener('click', function () {
+// 	showOtp();
+// });
+
 function showCountdownTimer() {
 	let time = 10;
 
 	let id = setInterval(function () {
 		if (time > 9) {
-			document.getElementById('timer').innerText = `00:${time}`;
-			document.getElementById('timer1').innerText = `00:${time}`;
+			document.getElementById('timer').innerHTML = `00:${time}`;
+			document.getElementById('timer1').innerHTML = `00:${time}`;
 		} else {
-			document.getElementById('timer').innerText = `00:0${time}`;
-			document.getElementById('timer1').innerText = `00:0${time}`;
+			document.getElementById('timer').innerHTML = `00:0${time}`;
+			document.getElementById('timer1').innerHTML = `00:0${time}`;
 		}
 		time--;
 		if (time < 0) {
@@ -57,6 +67,27 @@ function verifyOtp() {
 let btn = document.querySelector('#pop_up');
 let popup2 = document.getElementById('pop_up2');
 let popup3 = document.getElementById('pop_up3');
+
+let open_popup = document.getElementById('open_popup');
+open_popup.addEventListener('click', function () {
+	openPopup();
+});
+
+let close_popup1 = document.getElementById('close_popup1');
+close_popup1.addEventListener('click', function () {
+	closePopup();
+});
+
+let close_popup2 = document.getElementById('close_popup3');
+close_popup2.addEventListener('click', function () {
+	closePopup();
+});
+
+let close_popup3 = document.getElementById('close_popup3');
+close_popup3.addEventListener('click', function () {
+	closePopup();
+});
+
 function openPopup() {
 	console.log('hello');
 	btn.classList.add('open-popup');
@@ -84,6 +115,7 @@ function newUserPopup(x) {
 			console.log(x, name.value, email.value);
 			newUser(x, name.value, email.value);
 			closePopup();
+			window.location.href = '';
 		} else {
 			popup2.classList.remove('open-popup');
 			newUserPopup(x);
@@ -110,6 +142,7 @@ function existingUser(x) {
 
 			user = [];
 			closePopup();
+			window.location.href = '';
 		} else {
 			popup2.classList.remove('open-popup');
 			existingUser(x);
@@ -152,7 +185,7 @@ function newUserRegister() {
 }
 
 function newUser(number, name, email) {
-	newObj = {
+	let newObj = {
 		number,
 		name,
 		email,
@@ -163,6 +196,11 @@ function newUser(number, name, email) {
 	localStorage.setItem('userData', JSON.stringify(usersArr));
 	localStorage.setItem('loginData', JSON.stringify(newObj));
 }
+
+let back_popup = document.getElementById('back_popup');
+back_popup.addEventListener('click', function () {
+	backPopup();
+});
 
 function backPopup() {
 	popup3.classList.remove('open-popup');
@@ -193,6 +231,10 @@ if (loginUser.length === 0) {
 		profile.classList.toggle('active');
 	});
 }
+let log_out = document.getElementById('log_out');
+log_out.addEventListener('click', function () {
+	logout();
+});
 
 function logout() {
 	localStorage.removeItem('loginData');
