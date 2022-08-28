@@ -33,9 +33,9 @@
 
 #navbar>div:first-child>div>div>.navImg {
     margin-right: -12px;
-    margin-top: 7px;
     width: 20px;
     height: 20px;
+    margin-top: 7px;
 }
 
 #navbar>div:nth-child(2) {
