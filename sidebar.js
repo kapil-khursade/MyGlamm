@@ -46,7 +46,7 @@
         <img class="imge" src="https://media.istockphoto.com/id/948775994/vector/the-letter-p-icon-element-of-minimalistic-icon-for-mobile-concept-and-web-apps-signs-and.webp?s=612x612&w=is&k=20&c=4RhkaNbTPHh5ygB7rRiAufnOifcdHE0CLAChRXZpiNo=" alt="">
     </div>
     <h3 class="h3">Or copy and share with your contacts</h3>
-    <p id="d">Experience MyGlamm's newage makeup products, crafted in Europe<br><b class="color-gold">https://myglamm.in/FmymW9sgOjb?rc=ALOK2056</b></p>
+    <p id="d">Experience MyGlamm's newage makeup products, crafted in Europe<br><b class="color-gold">https://myglamm.in/FmymW9sgOjb?rc=<span class="spanc" id="namy">ALOK</span>2056</b></p>
     <button type="button">Copy Text</button>
 </div>`)
  }
