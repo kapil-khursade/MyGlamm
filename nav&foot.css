@@ -17,7 +17,7 @@
 
 #navbar>div:first-child>div {
     margin: auto;
-    padding-top: 5px;
+    padding-top: 5px; 
     width: 1120px;
     display: flex;
     justify-content: space-between;

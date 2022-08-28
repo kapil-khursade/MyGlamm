@@ -4,7 +4,7 @@ let backBTN=JSON.parse(localStorage.getItem("backBTN")) || 0;
 let query=(localStorage.getItem("query")) || "";
 main(query)
 
-
+let data;
 // function "main" for fetching data using api link with "query" argument;
 async function main(catchquery) {
     
@@ -13,7 +13,7 @@ async function main(catchquery) {
         // let res = await fetch(`https://makeup-api.herokuapp.com/api/v1/products.json`)
 
 
-        let data = await res.json()
+        data = await res.json()
         console.log(data);
         displayData(data) //calling display data (dom) 
        
@@ -40,12 +40,31 @@ document.getElementById("category-title").innerText=categoryTitle;
     main(ele.id)
 }
 
-
+let stpg = 0;
+let edpg = 18
+function nextPagination(){
+    if(stpg>=0&&edpg<data.length){
+        stpg = stpg + 18;
+        edpg = edpg + 18;
+        displayData(data);
+        window.location.href = "#category-title-div";
+        console.log(stpg, edpg)
+    }
+}
+function prevPagination(){
+    if(stpg>=0&&edpg>18){
+        stpg = stpg - 18;
+        edpg =edpg - 18;
+        displayData(data);
+        window.location.href = "#category-title-div";
+        console.log(stpg, edpg)
+    }  
+}
 //display data function (DOM)
 function displayData(data)
 {
 
-let query=JSON.parse(localStorage.getItem("query")) || "";
+let query=(localStorage.getItem("query")) || "";
 
     if(backBTN==1)
     {
@@ -61,8 +80,10 @@ let query=JSON.parse(localStorage.getItem("query")) || "";
     container.innerHTML="";
     
     //applying highorder function
-    data.forEach(function(ele,index){
+    // data.forEach(function(ele,index){
         // console.log(ele)
+        for(let j=stpg; j<edpg; j++){
+            let ele = data[j];
         let maindiv = document.createElement('div');
 
         let img = document.createElement('img');
@@ -117,8 +138,8 @@ let query=JSON.parse(localStorage.getItem("query")) || "";
             localStorage.setItem("productDetail",JSON.stringify(ele));
             window.location.href="./productDetail.html";
         })
-
-    });
+    }
+    // });
 }
 
 
