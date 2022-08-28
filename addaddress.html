@@ -10,14 +10,30 @@
     <link rel="stylesheet" href="./font.css" />
     <link rel="stylesheet" href="addaddress.css" />
      <!-- Ḷinking the css of the footer -->
-     <link rel="stylesheet" href="nav&foot.css">
+     <link rel="stylesheet" href="nav1.css">
       <!-- To show the logo in the title of website -->
     <link rel = "icon" href = "https://i.postimg.cc/sG1kG01m/My-Glamm-Logo-1.jpg" type = "image/x-icon">
      <!-- ṃessage icon library -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <!-- navbar  -->
+     <!-- Library for slider button icon -->
+		<link
+        rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <!-- To show the logo in the title of website -->
+    <link
+        rel="icon"
+        href="https://i.postimg.cc/sG1kG01m/My-Glamm-Logo-1.jpg"
+        type="image/x-icon"
+    />
+    <link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0"
+		/>
 </head>
 <body>
-    <div>
+    <div id="navbar">
         <!-- Here will be navbar -->
     </div>
     <div id="container">
@@ -97,5 +113,15 @@
         document.getElementById("neighbour").value = addData.neighbour;
     }
 </script>
+<!-- Importing the navbar functionality -->
+<script type="module">
+	import { navbar, footer } from './nav&foot.js';
 
+	let nav = document.getElementById('navbar');
+	nav.innerHTML = navbar();
+	let foot = document.getElementById('footer');
+
+	foot.innerHTML = footer();
+</script>
+<script src="./sign&login.js" type="module"></script>
 

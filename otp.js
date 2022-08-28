@@ -3,13 +3,12 @@
 
 let otp;
 let inputOtp;
-// showCountdownTimer();
-showOtp();
+showCountdownTimer();
+
 function showOtp(){
 
     otp =9999-Math.ceil(Math.random()*1000);
     alert(`OTP is ${otp}`);
-    showCountdownTimer()
    
 }
 
@@ -24,13 +23,16 @@ function showCountdownTimer(){
             document.getElementById("timer").innerText = `00:0${time}`;
         }
         time--;
+        if(time==15){
+            showOtp();
+        }
         if(time < 0){
             clearTimeout(id);
             let newOtp = document.createElement("div");
             newOtp.innerText = "Resend OTP";
             newOtp.addEventListener("click", function(){
                 document.getElementById("timer").innerHTML = null;
-                showOtp();
+                showCountdownTimer();
             })
             document.getElementById("timer").innerText = null;
             document.getElementById("timer").append(newOtp);
@@ -45,9 +47,15 @@ function verfyOtp(){
     inputOtp =  document.querySelector("#inputOtp").value;
 
     if(inputOtp == otp){
-     alert("Login Successfull")
+     alert("Payment Successfull");
+     localStorage.setItem("cartTotal", "");
+     let addTobag = JSON.parse(localStorage.getItem("addToBag"));
+     localStorage.setItem("myOrder", JSON.stringify(addTobag));
+     localStorage.removeItem("addToBag");
+     window.location.href="./myOrder.html"
     }else{
-    alert("Login Failed")
+    alert("Payment Failed");
+    window.location.href = "payment.html"
     }
 }
 

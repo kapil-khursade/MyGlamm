@@ -1,10 +1,13 @@
 // This page  will provide js for the myOrder.js
-let myOrder = JSON.parse(localStorage.getItem("addToBag"))||[]
+let myOrder = JSON.parse(localStorage.getItem("myOrder"))||[];
+if(myOrder!=[]){
+ append(myOrder)
+}
 
 function append (data){
-    let container=  document.getElementById("myOrdercontainer")
+    let container=  document.getElementById("myOrdercontainer");
+    container.innerHTML=null
     data.forEach(ele => {
-        container.innerHTML=null
          div=document.createElement("div")
          div.setAttribute("class","pdiv")
           img=document.createElement("img")
@@ -18,7 +21,7 @@ function append (data){
          container.append(div)
     });
 }
-// append(myOrder)
+
 
 
 //

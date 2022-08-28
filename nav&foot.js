@@ -571,7 +571,8 @@ function footer() {
 export { navbar, footer };
 
 // search functionality
-let query=localStorage.getItem('query') || '';
+
+let query=localStorage.getItem("query") || "";
 
 function searchquery() {
 	let cat_title;
@@ -594,11 +595,14 @@ function searchquery() {
 
 // creating debouncing function for search functionality
 let id;
-function debounce(fun, time) {
-	if (id) {
-		clearTimeout(id);
-	}
-	id = setTimeout(function () {
-		fun();
-	}, time);
+
+function  debounce(fun,time){
+    if(id)
+    {
+        clearTimeout(id);
+    }
+    id = setTimeout(function () {
+        fun()
+    }, time)
+
 }
