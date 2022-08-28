@@ -1,0 +1,151 @@
+#mybag-heading{
+    width:70%;
+    height:150px;
+    /* border:1px solid black; */
+    margin: auto;
+    
+}
+h1{
+    font-size: 30px;
+    font-family: din-2014,sans-serif;
+    /* background-color: aqua; */
+    text-align: center;
+}
+#congrats-message{
+    width:100%;
+    text-align: center;
+    height:46px;
+    background-color: black;
+    color: aliceblue;
+    justify-content: center;
+    align-items: center;
+   
+}
+strong{
+    padding-top: 10px;
+    font-size: 20px;
+    color: aliceblue;
+}
+h3{
+    padding-top: 10px;
+    font-size: 18px;
+    color: aliceblue;
+}
+#product-div{
+    width: 100%;
+    height:125px;
+    margin-top: 10px; 
+    /* background-color: bisque; */
+    display: flex;
+    text-align: center;
+}
+#product-div>div{
+ width:16%;
+ height: 98%;
+ /* border: 1px solid blue; */
+ 
+}
+
+#img-bag-product>img{
+    width:100%;
+    height: 100%;
+}
+
+#product-div>#name-bag-product{
+    width: 400px;
+    padding-top: 0%;
+   text-align: center;  
+   
+
+}
+#product-div>#name-bag-product>p{
+    font-size: 16px;
+    
+}
+#amount-bag-product>p{
+    font-size: 16px;
+    padding-top: 30px;
+    /* background-color: #f7f7f7; */
+    height:30px;
+}
+#product-div>#quantity-bag-product{
+    width: 80px;
+}
+
+#quantity-bag-product>input{
+    margin-top: 38px;
+    height:30px;
+    font-size: 16px;
+    width:60px;
+    background-color: #f7f7f7;
+    border:2px solid rgb(192, 191, 191);
+    border-radius: 4px;
+    cursor: pointer;
+    padding-left: 10px;
+
+}
+#my-bag-closebtn>button{
+    border: none;
+    background-color: white;
+}
+#my-bag-closebtn>button>h2{
+    font-size: 20px;
+    color: rgb(106, 104, 104);
+    cursor: pointer;
+    
+}
+#total-bag-product>p{
+    font-size: 16px;
+    padding-top: 30px;
+    /* background-color: #f7f7f7; */
+    height:30px;
+}
+#grand-total-container{
+    width:100%;
+    height:60px;
+    background-color: #f7f7f7;
+    margin: auto;
+ display: flex;
+ padding-top: 0px;
+}
+#grand-total-container>p{
+    font-size:16px;
+    padding-top:10px
+}
+#grand-total-container>p>b{
+    font-size: 16px;
+    font-weight: bold;
+}
+#grand-total-container>span>p{
+    font-size:16px;
+    padding-top:10px
+}
+#grand-total-container>span>p>b{
+    font-size: 16px;
+    font-weight: bold;
+}
+#grand-total-container>span{
+    margin-left: 38%;
+}
+#btn>button{
+    width: 400px;
+    height:50px;
+    font-size: 16px;
+    background-color: black;
+    color: white;
+    margin-top: 20px;
+    margin-left: 33%;
+}
+#hr-tag{
+    margin-top:40px;
+}
+
+
+
+
+
+
+
+
+
+
