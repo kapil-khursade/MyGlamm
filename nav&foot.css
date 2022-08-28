@@ -31,8 +31,11 @@
     padding-top: 3px;
 }
 
-.navImg {
+#navbar>div:first-child>div>div>.navImg {
     margin-right: -12px;
+    margin-top: 7px;
+    width: 20px;
+    height: 20px;
 }
 
 #navbar>div:nth-child(2) {
@@ -157,33 +160,33 @@
 
 /*DropDown CSS starts from here*/
 
-.dropdown {
+#navbar .dropdown {
     padding-bottom: 3px;
 }
 
-.dropdown>p {
+#navbar .dropdown>p {
     margin: 0;
     padding: 10px 15px;
 }
 
-.dropdown>p>a {
+#navbar .dropdown>p>a {
     text-decoration: none;
     color: black;
 }
 
-.dropdown>p:hover {
+#navbar .dropdown>p:hover {
     border-bottom: 3px solid #FF9797;
     margin-bottom: -10px;
 }
 
-.nav_1_contents>p:hover,
-.nav_1_heading:hover {
+#navbar .nav_1_contents>p:hover,
+#navbar .nav_1_heading:hover {
     border-bottom: 3px solid #FF9797;
     margin-bottom: -8px;
 
 }
 
-.options {
+#navbar .options {
     width: 1120px;
     background-color: white;
     position: absolute;
@@ -195,87 +198,87 @@
     min-height: 30vh;
 }
 
-.dropdown:hover .options {
+#navbar .dropdown:hover .options {
     display: flex;
     /* To dim everything else during this event*/
     box-shadow: 0 714px 0 100vh rgba(0, 0, 0, .4);
 }
 
-.options>div {
+#navbar .options>div {
     width: 100%;
 }
 
-.options>div:first-child {
+#navbar .options>div:first-child {
     display: flex;
     justify-content: start;
     gap: 80px;
 }
 
 
-.dropdown:nth-child(3)>.options>div:first-child {
+#navbar .dropdown:nth-child(3)>.options>div:first-child {
     width: 20%;
 
 }
 
-.dropdown:nth-child(3)>.options>div:last-child {
+#navbar .dropdown:nth-child(3)>.options>div:last-child {
     display: flex;
     width: 74%;
     gap: 20px;
 }
 
-.dropdown:nth-child(3)>.options>div:last-child>div {
+#navbar .dropdown:nth-child(3)>.options>div:last-child>div {
     width: 25%;
     border: 1px solid lightgray;
 }
 
-.dropdown:nth-child(3)>.options>div:last-child>div>img {
+#navbar .dropdown:nth-child(3)>.options>div:last-child>div>img {
     width: 100%;
 }
 
-.dropdown:nth-child(4)>.options>div {
+#navbar .dropdown:nth-child(4)>.options>div {
     display: block;
     width: 15%;
 }
 
 
-.dropdown:nth-child(5)>.options>div {
+#navbar .dropdown:nth-child(5)>.options>div {
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
 
-.dropdown:nth-child(5)>.options>div>div:last-child {
+#navbar .dropdown:nth-child(5)>.options>div>div:last-child {
     width: 20%;
     border: 1px solid lightgray;
 }
 
-.dropdown:nth-child(5)>.options>div:last-child>div>img {
+#navbar .dropdown:nth-child(5)>.options>div:last-child>div>img {
     width: 100%;
     margin-top: 0;
 }
 
-.dropdown:nth-child(6)>.options>div:first-child {
+#navbar .dropdown:nth-child(6)>.options>div:first-child {
     width: 15%;
 }
 
 
-.dropdown:nth-child(6)>.options>div:last-child {
+#navbar .dropdown:nth-child(6)>.options>div:last-child {
     display: flex;
     justify-content: end;
     width: 80%;
     gap: 20px;
 }
 
-.dropdown:nth-child(6)>.options>div:last-child>div {
+#navbar .dropdown:nth-child(6)>.options>div:last-child>div {
     width: 25%;
     border: 1px solid lightgray;
 }
 
-.dropdown:nth-child(6)>.options>div:last-child>div>img {
+#navbar .dropdown:nth-child(6)>.options>div:last-child>div>img {
     width: 100%;
 }
 
-.dropdown>.options>div:last-child>div>img+p {
+#navbar .dropdown>.options>div:last-child>div>img+p {
     font-weight: 600;
     width: 95%;
     height: 15px;
@@ -284,31 +287,31 @@
     white-space: nowrap;
 }
 
-.dropdown>.options>div:last-child>div>img+p+p {
+#navbar .dropdown>.options>div:last-child>div>img+p+p {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
 }
 
-.dropdown>.options>div:last-child>div>img~p {
+#navbar .dropdown>.options>div:last-child>div>img~p {
     margin-left: 10px;
 }
 
-.dropdown>.options>div:last-child>div s {
+#navbar .dropdown>.options>div:last-child>div s {
     color: grey;
 }
 
-.nav_1_heading {
+#navbar .nav_1_heading {
     color: #FFAFAF;
     font-weight: 600;
     margin-bottom: -5px;
 }
 
-.options>div:first-child {
+#navbar .options>div:first-child {
     margin-top: -10px;
 }
 
-.nav_1_heading~p {
+#navbar .nav_1_heading~p {
     margin-bottom: -5px;
 }
 
@@ -591,12 +594,12 @@
     justify-content: space-between;
 }
 
-ul label {
+#footer2 ul label {
     margin: 0 15px 0 0;
     /* border: 1px solid; */
 }
 
-form+div>ul {
+#footer2 form+div>ul {
     width: 100%;
     display: flex;
     gap: 10px;
