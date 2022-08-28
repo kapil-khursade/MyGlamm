@@ -238,5 +238,5 @@ log_out.addEventListener('click', function () {
 
 function logout() {
 	localStorage.removeItem('loginData');
-	window.location.href = '';
+	window.location.href = './index.html';
 }
