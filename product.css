@@ -1,19 +1,23 @@
 /* dummy nave bar  */
-#navbar {
+/* #navbar {
   display: flex;
   justify-content: space-around;
 }
 #navbar > div:last-child {
   display: flex;
   justify-content: space-between;
+} */
+#top_height{
+  height: 140px;
 }
-
 /* main title */
 #category-title {
   text-align: center;
   font-size: 40px;
   font-weight: bold;
   text-decoration-line: underline;
+  margin-bottom: 3%;
+  margin-top: 3%;
   
 }
 /* maion container */
