@@ -1,7 +1,7 @@
 // This page will consist the javascript that will export the navbar and to all the page of the website.
 function navbar() {
 	return `<div>
-    <div>
+    <div id="top1">
         <div>
             <img class="navImg" src="https://www.myglamm.com/images/gift.svg" alt="" />
             <p>FLAT 199 Store</p>
@@ -15,7 +15,7 @@ function navbar() {
 </div>
 <div>
     <div>
-        <img
+        <img id="top2"
             src="https://files.myglamm.com/site-images/original/MyGlamm-Logo_1.jpg"
             alt=""
         />
@@ -32,7 +32,7 @@ function navbar() {
     </div>
     <div>
         <div>
-            <span class="material-symbols-rounded"> shopping_bag </span>
+            <span id="bag" class="material-symbols-rounded"> shopping_bag </span>
         </div>
         <div id="userProfile">
             <div>
@@ -40,7 +40,7 @@ function navbar() {
                     person_filled
                 </span>
             </div>
-            <div class="userOptions">
+            <div id="userop" class="userOptions">
                 <p><a href="./profile.html">My Profile</a></p>
                 <p><a href="./myOrder.html">My Orders</a></p>
                 <p><a href="./myDashboard.html">My Dashboard</a></p>

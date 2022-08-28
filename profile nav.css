@@ -33,14 +33,24 @@
 
 .navImg {
     margin-right: -12px;
-    width:20px;
-    height:20px;
-    margin-top: 7px;
+    width: 15px;
+    height:15px;
+    margin-top: 10px;
 }
+#top1>div>p{
+    margin-top: 4px;
+    font-size: 13px;
+}
+/* #top2{
+    width:150px;
+    margin-top:-5px;
+    margin-bottom: -20px;
+    
+} */
 
 #navbar>div:nth-child(2) {
     margin: auto;
-    padding-top: 10px;
+    padding-top: 5px;
     width: 1120px;
     display: flex;
     justify-content: space-between;
@@ -69,16 +79,19 @@
     display: none;
 }
 
-.userOptions>p>a {
+#userProfile .userOptions>p>a {
     text-decoration: none;
-    color: black;
+    color: black;  
+}
+#userop>p{
+    line-height: 10px;
 }
 
 .userOptions>p>a:hover,
 .userOptions>button:hover {
     font-weight: 600;
     text-decoration: none;
-    color: black;
+    /* color: black; */
 }
 
 .userOptions>p:nth-child(4):hover {
@@ -152,7 +165,7 @@
 #navbar>div:nth-child(3) {
     width: 1120px;
     margin: auto;
-    padding-top: 10px;
+    padding-top: 0px;
     display: flex;
     justify-content: start;
     background-color: white;
@@ -160,33 +173,38 @@
 
 /*DropDown CSS starts from here*/
 
-.dropdown {
-    padding-bottom: 3px;
+#navbar .dropdown {
+    padding-bottom: 0px;
 }
 
-.dropdown>p {
+#navbar .dropdown>p {
     margin: 0;
-    padding: 10px 15px;
+    padding: 2.1px 15px;
 }
 
-.dropdown>p>a {
+#navbar .dropdown>p>a {
     text-decoration: none;
     color: black;
 }
 
-.dropdown>p:hover {
+#navbar .dropdown>p:hover {
+    border-bottom: 3px solid #FF9797;
+    margin-bottom: -0px;
+}
+
+#navbar .nav_1_contents>p:hover{
     border-bottom: 3px solid #FF9797;
     margin-bottom: -10px;
+    padding-top: -5px;
 }
-
-.nav_1_contents>p:hover,
-.nav_1_heading:hover {
+#navbar .nav_1_heading:hover {
     border-bottom: 3px solid #FF9797;
     margin-bottom: -8px;
+  
 
 }
 
-.options {
+#navbar .options {
     width: 1120px;
     background-color: white;
     position: absolute;
@@ -198,121 +216,125 @@
     min-height: 30vh;
 }
 
-.dropdown:hover .options {
+#navbar .dropdown:hover .options {
     display: flex;
     /* To dim everything else during this event*/
     box-shadow: 0 714px 0 100vh rgba(0, 0, 0, .4);
 }
 
-.options>div {
+#navbar .options>div {
     width: 100%;
 }
 
-.options>div:first-child {
+#navbar .options>div:first-child {
     display: flex;
     justify-content: start;
     gap: 80px;
 }
 
-
-.dropdown:nth-child(3)>.options>div:first-child {
+#bag{
+    margin-top: 13px;
+}
+#navbar .dropdown:nth-child(3)>.options>div:first-child {
     width: 20%;
 
 }
 
-.dropdown:nth-child(3)>.options>div:last-child {
+#navbar .dropdown:nth-child(3)>.options>div:last-child {
     display: flex;
     width: 74%;
     gap: 20px;
 }
 
-.dropdown:nth-child(3)>.options>div:last-child>div {
+#navbar .dropdown:nth-child(3)>.options>div:last-child>div {
     width: 25%;
     border: 1px solid lightgray;
 }
 
-.dropdown:nth-child(3)>.options>div:last-child>div>img {
+#navbar .dropdown:nth-child(3)>.options>div:last-child>div>img {
     width: 100%;
 }
 
-.dropdown:nth-child(4)>.options>div {
+#navbar .dropdown:nth-child(4)>.options>div {
     display: block;
     width: 15%;
 }
 
 
-.dropdown:nth-child(5)>.options>div {
+#navbar .dropdown:nth-child(5)>.options>div {
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
 
-.dropdown:nth-child(5)>.options>div>div:last-child {
+#navbar .dropdown:nth-child(5)>.options>div>div:last-child {
     width: 20%;
     border: 1px solid lightgray;
 }
 
-.dropdown:nth-child(5)>.options>div:last-child>div>img {
+#navbar .dropdown:nth-child(5)>.options>div:last-child>div>img {
     width: 100%;
     margin-top: 0;
 }
 
-.dropdown:nth-child(6)>.options>div:first-child {
+#navbar .dropdown:nth-child(6)>.options>div:first-child {
     width: 15%;
 }
 
 
-.dropdown:nth-child(6)>.options>div:last-child {
+#navbar .dropdown:nth-child(6)>.options>div:last-child {
     display: flex;
     justify-content: end;
     width: 80%;
     gap: 20px;
 }
 
-.dropdown:nth-child(6)>.options>div:last-child>div {
+#navbar .dropdown:nth-child(6)>.options>div:last-child>div {
     width: 25%;
     border: 1px solid lightgray;
 }
 
-.dropdown:nth-child(6)>.options>div:last-child>div>img {
+#navbar .dropdown:nth-child(6)>.options>div:last-child>div>img {
     width: 100%;
 }
 
-.dropdown>.options>div:last-child>div>img+p {
+#navbar .dropdown>.options>div:last-child>div>img+p {
     font-weight: 600;
     width: 95%;
-    height: 15px;
+    height: 20px;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
 }
 
-.dropdown>.options>div:last-child>div>img+p+p {
+#navbar .dropdown>.options>div:last-child>div>img+p+p {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
 }
 
-.dropdown>.options>div:last-child>div>img~p {
+#navbar .dropdown>.options>div:last-child>div>img~p {
     margin-left: 10px;
 }
 
-.dropdown>.options>div:last-child>div s {
+#navbar .dropdown>.options>div:last-child>div s {
     color: grey;
 }
 
-.nav_1_heading {
+#navbar .nav_1_heading {
     color: #FFAFAF;
     font-weight: 600;
     margin-bottom: -5px;
 }
 
-.options>div:first-child {
+#navbar .options>div:first-child {
     margin-top: -10px;
 }
 
-.nav_1_heading~p {
-    margin-bottom: -5px;
+#navbar .nav_1_heading~p {
+    margin-bottom: -20px;
+    /* border: 1px solid; */
+    /* height: 20px; */
 }
 
 /*Pop Up CSS starts from here*/
