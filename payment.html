@@ -213,14 +213,14 @@ nav&foot . -->
             </div>
             <div id="profile">
                 <img src="https://www.myglamm.com/images/no_user_yellow.png" alt="">
-                <p>Name</p>
+                <p id="loginName">Login</p>
                 <i class="fa fa-caret-down">
                     <ul id="profile_drop">
                         <li type="none"><a href="profile.html">My Profile</a></li>
                         <li type="none"><a href="myOrder.html">My Orders</a></li>
                         <li type="none"><a href="myDashboard.html">My Dashboard</a></li>
                         <li type="none"><a href="myGlamm.html">My GlamXO Party</a></li>
-                        <button>Logout</button>
+                        <button onclick="logoutFunc()">Logout</button>
                     </ul>
                 </i>
             </div>
@@ -263,13 +263,32 @@ nav&foot . -->
         document.getElementById("profile_drop").style.visibility = "hidden"
     });
 
-    function getToOtp(){
-        window.location.href = "./otp.html"
-    }
-
     let payableAmt = localStorage.getItem("cartTotal")||"";
 
     document.getElementById("amt_payable_ac").innerText = `Rs ${payableAmt}`
     document.getElementById("patToOtp").innerText = `Pay Rs ${payableAmt}`
 
+
+    // Showing logn name
+    let loginData = JSON.parse(localStorage.getItem("loginData"))||{};
+    if(loginData.name!=undefined){
+        document.getElementById("loginName").innerText = loginData.name;
+    }
+
+    // logout fuctionality
+    function logoutFunc(){
+	localStorage.removeItem('loginData');
+	window.location.href = '';
+    }
+
+    // Only alow to proceed if loged in
+    loginData = JSON.parse(localStorage.getItem("loginData"))||{}
+    
+     function getToOtp(){
+     if(loginData.name!=undefined){
+        window.location.href = "./otp.html"
+    }else{
+        alert("Please Login To Proccede")
+    }
+    }
 </script>

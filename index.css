@@ -606,3 +606,17 @@
 #brand_story_content>img {
     cursor: pointer;
 }
+
+#message_icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 100px;
+    background-color: #FF9696;
+    position: fixed;
+    top: 575px;
+    left: 1275px;
+    padding-top: 1.0%;
+    padding-left: 1.35%;
+    color: white;
+    cursor: pointer;
+}
