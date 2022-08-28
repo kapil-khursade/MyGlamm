@@ -1,6 +1,7 @@
 /* Background color */
 #home_page {
     background-color: rgb(244, 245, 245);
+    margin-top: 158px;
 }
 
 /* Add banner settimeout css */
@@ -470,7 +471,7 @@
     text-align: center;
     background-color: rgba(288, 288, 288, 0.5);
     position: relative;
-    z-index: 1;
+    /* z-index: 1; */
     top: -60px;
     cursor: pointer;
 }
@@ -584,7 +585,7 @@
 
 #brand_story_content {
     position: relative;
-    z-index: 1;
+    /* z-index: 1; */
     top: -320px;
     width: 600px;
     margin: auto;
