@@ -13,9 +13,22 @@ nav&foot .->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Category</title>
-    <link rel="stylesheet" href="./font.css" />
+    <!-- <link rel="stylesheet" href="./font.css" /> -->
     <link rel="stylesheet" href="./product.css"/>
     <link rel="stylesheet" href="./nav&foot.css">
+    <link
+    rel="icon"
+    href="https://i.postimg.cc/sG1kG01m/My-Glamm-Logo-1.jpg"
+    type="image/x-icon"
+/>
+<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0"
+		/>
+		<script
+			src="https://kit.fontawesome.com/1bec6be586.js"
+			crossorigin="anonymous"
+		></script>
 
     <!-- pagination link -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -27,7 +40,7 @@ nav&foot .->
 <body>
     <!-- navbar div start -->
     <div id="navbar">
-        <input type="text" id="search" placeholder="search here" oninput="debounce(searchquery,1500)">
+        <!-- <input type="text" id="search" placeholder="search here" oninput="debounce(searchquery,1500)">
         <div>
             <button id="Blush" onclick="pressedbtn(Blush)">Blush</button>
             <button id="Mascara" onclick="pressedbtn(Mascara)">Mascara</button>
@@ -39,11 +52,11 @@ nav&foot .->
             <button id="Foundation" onclick="pressedbtn(Foundation)">Foundation</button>
             <button id="Nail_polish" onclick="pressedbtn(Nail_polish)">Nail polish</button>
            
-        </div>
+        </div> -->
         
     </div>
     <!-- navbar div end -->
-
+    <div id="top_height"></div>
     <!-- product page start -->
     <div id="category-title-div">
         <h1 id="category-title"></h1>
@@ -72,9 +85,12 @@ nav&foot .->
 </html>
 <script src="./product.js"></script>
 <script type="module">
-	import { footer } from './nav&foot.js';
+	import { navbar, footer } from './nav&foot.js';
 
+	let nav = document.getElementById('navbar');
+	nav.innerHTML = navbar();
 	let foot = document.getElementById('footer');
 
 	foot.innerHTML = footer();
 </script>
+<script src="./sign&login.js" type="module"></script>
