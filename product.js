@@ -1,7 +1,7 @@
 // This page will provide all the necessary js for product.html and the function mentioned on it.
 
 let backBTN=JSON.parse(localStorage.getItem("backBTN")) || 0;
-let query=(localStorage.getItem("query")) || "";
+let query=JSON.parse(localStorage.getItem("query")) || "";
 main(query)
 
 let data;

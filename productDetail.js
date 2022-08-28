@@ -156,16 +156,18 @@ recentPage.addEventListener("click",function(){
 })
 
 
-let popup = document.getElementById("popup");
-function openPopup()
+let Cartpopup = document.getElementById("Cartpopup");
+function CartpenPopup()
 {
+
   // console.log(addToBagLS);
   // console.log("inside popup")
- popup.classList.add("open-popup");
+  Cartpopup.classList.add("Cartopen-popup");
 }
-function closePopup()
+function closeCartPopup()
 {
-  popup.classList.remove("open-popup");
+  Cartpopup.classList.remove("Cartopen-popup");
+  
 }
 
 function dipslayBagData(data)

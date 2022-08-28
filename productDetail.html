@@ -80,7 +80,7 @@ nav&foot . -->
                 <div id="shade_color-div"></div>
 
                 <div id="addToCart-div">
-                   <button class="BTN" onclick="openPopup()" id="addToCart"><span class="material-symbols-rounded"> shopping_bag </span>ADD TO BAG</button>
+                   <button class="BTN" onclick="CartpenPopup()" id="addToCart"><span class="material-symbols-rounded"> shopping_bag </span>ADD TO BAG</button>
                    <p>FREE GIFT ON PURCHASE!</p>
                 </div>
 
@@ -123,17 +123,17 @@ nav&foot . -->
 
 
         <!-- popup box start -->
-        <div class="popupBox" id="popup">
+        <div class="CartpopupBox" id="Cartpopup">
 
             <div id="poup-top">
                 <div id="my-bag"><i class="fa-solid fa-bag-shopping"></i><span id="bag_count">0</span></div>
-                <button onclick="closePopup()" id="close_Btn">X</button>
+                <button onclick="closeCartPopup()" id="close_Btn">X</button>
             </div>
             <div id="cart-data-div"></div>
             <div id="congrats-banner">Congrats! You're eligible for free gift</div>
             <div id="total-ammount-div">
                 <p>Total Amount</p>
-                <p id="display-total">120</p>
+                <p id="display-total"></p>
             </div>
             <div id="popup-checkout-btn">
                 <p>Checkout</p>
