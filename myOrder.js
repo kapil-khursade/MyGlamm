@@ -1,5 +1,5 @@
 // This page  will provide js for the myOrder.js
-let myOrder = JSON.parse(localStorage.getItem("myOrder"))||[]
+let myOrder = JSON.parse(localStorage.getItem("addToBag"))||[]
 
 function append (data){
     let container=  document.getElementById("myOrdercontainer")
