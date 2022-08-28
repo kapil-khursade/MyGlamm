@@ -3,12 +3,12 @@ function navbar() {
 	return `<div>
     <div>
         <div>
-            <img class="navImg" src="https://www.myglamm.com/images/gift.svg" alt="" />
+            <img src="https://www.myglamm.com/images/gift.svg" alt="" />
             <p>FLAT 199 Store</p>
             <p>SHOP NOW</p>
         </div>
         <div>
-            <img class="navImg" src="https://www.myglamm.com/images/shop.svg" alt="" />
+            <img src="https://www.myglamm.com/images/shop.svg" alt="" />
             <p>MyGlamm Store</p>
         </div>
     </div>

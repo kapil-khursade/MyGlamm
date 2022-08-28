@@ -1,7 +1,6 @@
 #navbar {
     position: fixed;
     width: 100%;
-    height: 131.5px;
     background-color: white;
     margin: 0 -5px 10px -5px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -31,7 +30,7 @@
     padding-top: 3px;
 }
 
-.navImg {
+#navbar>div:first-child>div>div>img {
     margin-right: -12px;
 }
 
@@ -157,33 +156,33 @@
 
 /*DropDown CSS starts from here*/
 
-#navbar .dropdown {
+.dropdown {
     padding-bottom: 3px;
 }
 
-#navbar .dropdown>p {
+.dropdown>p {
     margin: 0;
     padding: 10px 15px;
 }
 
-#navbar .dropdown>p>a {
+.dropdown>p>a {
     text-decoration: none;
     color: black;
 }
 
-#navbar .dropdown>p:hover {
+.dropdown>p:hover {
     border-bottom: 3px solid #FF9797;
     margin-bottom: -10px;
 }
 
-#navbar .nav_1_contents>p:hover,
-#navbar .nav_1_heading:hover {
+.nav_1_contents>p:hover,
+.nav_1_heading:hover {
     border-bottom: 3px solid #FF9797;
     margin-bottom: -8px;
 
 }
 
-#navbar .options {
+.options {
     width: 1120px;
     background-color: white;
     position: absolute;
@@ -195,87 +194,87 @@
     min-height: 30vh;
 }
 
-#navbar .dropdown:hover .options {
+.dropdown:hover .options {
     display: flex;
     /* To dim everything else during this event*/
     box-shadow: 0 714px 0 100vh rgba(0, 0, 0, .4);
 }
 
-#navbar .options>div {
+.options>div {
     width: 100%;
 }
 
-#navbar .options>div:first-child {
+.options>div:first-child {
     display: flex;
     justify-content: start;
     gap: 80px;
 }
 
 
-#navbar .dropdown:nth-child(3)>.options>div:first-child {
+.dropdown:nth-child(3)>.options>div:first-child {
     width: 20%;
 
 }
 
-#navbar .dropdown:nth-child(3)>.options>div:last-child {
+.dropdown:nth-child(3)>.options>div:last-child {
     display: flex;
     width: 74%;
     gap: 20px;
 }
 
-#navbar .dropdown:nth-child(3)>.options>div:last-child>div {
+.dropdown:nth-child(3)>.options>div:last-child>div {
     width: 25%;
     border: 1px solid lightgray;
 }
 
-#navbar .dropdown:nth-child(3)>.options>div:last-child>div>img {
+.dropdown:nth-child(3)>.options>div:last-child>div>img {
     width: 100%;
 }
 
-#navbar .dropdown:nth-child(4)>.options>div {
+.dropdown:nth-child(4)>.options>div {
     display: block;
     width: 15%;
 }
 
 
-#navbar .dropdown:nth-child(5)>.options>div {
+.dropdown:nth-child(5)>.options>div {
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
 
-#navbar .dropdown:nth-child(5)>.options>div>div:last-child {
+.dropdown:nth-child(5)>.options>div>div:last-child {
     width: 20%;
     border: 1px solid lightgray;
 }
 
-#navbar .dropdown:nth-child(5)>.options>div:last-child>div>img {
+.dropdown:nth-child(5)>.options>div:last-child>div>img {
     width: 100%;
     margin-top: 0;
 }
 
-#navbar .dropdown:nth-child(6)>.options>div:first-child {
+.dropdown:nth-child(6)>.options>div:first-child {
     width: 15%;
 }
 
 
-#navbar .dropdown:nth-child(6)>.options>div:last-child {
+.dropdown:nth-child(6)>.options>div:last-child {
     display: flex;
     justify-content: end;
     width: 80%;
     gap: 20px;
 }
 
-#navbar .dropdown:nth-child(6)>.options>div:last-child>div {
+.dropdown:nth-child(6)>.options>div:last-child>div {
     width: 25%;
     border: 1px solid lightgray;
 }
 
-#navbar .dropdown:nth-child(6)>.options>div:last-child>div>img {
+.dropdown:nth-child(6)>.options>div:last-child>div>img {
     width: 100%;
 }
 
-#navbar .dropdown>.options>div:last-child>div>img+p {
+.dropdown>.options>div:last-child>div>img+p {
     font-weight: 600;
     width: 95%;
     height: 15px;
@@ -284,36 +283,36 @@
     white-space: nowrap;
 }
 
-#navbar .dropdown>.options>div:last-child>div>img+p+p {
+.dropdown>.options>div:last-child>div>img+p+p {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
 }
 
-#navbar .dropdown>.options>div:last-child>div>img~p {
+.dropdown>.options>div:last-child>div>img~p {
     margin-left: 10px;
 }
 
-#navbar .dropdown>.options>div:last-child>div s {
+.dropdown>.options>div:last-child>div s {
     color: grey;
 }
 
-#navbar .nav_1_heading {
+.nav_1_heading {
     color: #FFAFAF;
     font-weight: 600;
     margin-bottom: -5px;
 }
 
-#navbar .options>div:first-child {
+.options>div:first-child {
     margin-top: -10px;
 }
 
-#navbar .nav_1_heading~p {
+.nav_1_heading~p {
     margin-bottom: -5px;
 }
 
 /*Pop Up CSS starts from here*/
-#navbar .popUp {
+.popUp {
     width: 450px;
     height: 450px;
     background-color: #fff;
@@ -337,32 +336,32 @@
     transform: translate(-50%, -50%);
 }
 
-#navbar .popUp p {
+.popUp p {
     text-align: center;
     margin-top: 15px;
 }
 
-#navbar .popUp>div {
+.popUp>div {
     /* border: 1px solid; */
     width: 100%;
     text-align: center;
 }
 
-#navbar .popUp>p>img {
+.popUp>p>img {
     width: 12px;
 }
 
-#navbar .popUp>div:first-child {
+.popUp>div:first-child {
     display: flex;
     justify-content: end;
 }
 
-#navbar .popUp>div:first-child>p {
+.popUp>div:first-child>p {
     width: 100%;
     margin-top: 0px;
 }
 
-#navbar .popUp>div:nth-child(4) {
+.popUp>div:nth-child(4) {
     width: 105%;
     margin: 10px -10px 0 -10px;
     border-bottom: 1px solid lightgrey;
@@ -370,7 +369,7 @@
     height: 25px;
 }
 
-#navbar .popUp>div:nth-child(4)>p {
+.popUp>div:nth-child(4)>p {
     border-bottom: 2px solid;
     width: 22%;
     margin: 0 0 10px 90px;
@@ -379,27 +378,27 @@
     font-weight: 600;
 }
 
-#navbar .popUp img {
+.popUp img {
     width: 50%;
     margin-top: 20px;
 }
 
-#navbar .popUp>div:nth-child(5) {
+.popUp>div:nth-child(5) {
     display: flex;
     gap: 20px;
     padding: 0 10px;
     margin-top: 10px;
 }
 
-#navbar .popUp>div:nth-child(5)>div:last-child {
+.popUp>div:nth-child(5)>div:last-child {
     width: 65%;
 }
 
-#navbar .popUp>div:nth-child(5) label {
+.popUp>div:nth-child(5) label {
     font-size: 8px;
 }
 
-#navbar .popUp>div select {
+.popUp>div select {
     width: 100px;
     height: 35px;
     padding: 0 5px;
@@ -407,18 +406,18 @@
     border: 1px solid lightgrey;
 }
 
-#navbar .popUp>div:nth-child(5)>div:first-child {
+.popUp>div:nth-child(5)>div:first-child {
     width: 25%;
 }
 
-#navbar .popUp>div:nth-child(5) input {
+.popUp>div:nth-child(5) input {
     width: 100%;
     height: 35px;
     padding: 0 5px;
     border: 1px solid lightgrey;
 }
 
-#navbar .popUp>div:nth-child(5) label {
+.popUp>div:nth-child(5) label {
     margin-left: 0px;
     position: relative;
     top: 5px;
@@ -426,11 +425,11 @@
     background-color: white;
 }
 
-#navbar .popUp>div:nth-child(5)>div:last-child label {
+.popUp>div:nth-child(5)>div:last-child label {
     left: -90px;
 }
 
-#navbar .popUp>div:last-child button {
+.popUp>div:last-child button {
     margin: 20px auto auto 1%;
     background-color: black;
     color: white;
@@ -439,12 +438,12 @@
     font-weight: 600;
 }
 
-#navbar .popUp>div:last-child {
+.popUp>div:last-child {
     margin-bottom: 0px;
     /* border: 1px solid; */
 }
 
-#navbar .popUp>#box {
+.popUp>#box {
     width: 250px;
     height: 150px;
     /* border: 1px solid; */
