@@ -571,41 +571,31 @@ function footer() {
 export { navbar, footer };
 
 // search functionality
+
 let query=localStorage.getItem("query") || "";
 
-function searchquery()
-{
-    let cat_title;
-    let temp = document.querySelector('#search').value;
-    console.log(temp);
-    if(temp=="")
-    {
-        temp="Eyeshadow";
-      
-        cat_title= document.getElementById("category-title")
-        localStorage.setItem("query",JSON.stringify(temp));
+function searchquery() {
+	let cat_title;
+	let temp = document.querySelector('#search').value;
+	console.log(temp);
+	if (temp == '') {
+		temp = 'Eyeshadow';
 
-        window.location.href="./product.html";
-     
-    }
-    else
-    {
-       
-        cat_title=document.getElementById("category-title");
-        cat_title.innerText=`Search Result for "${temp}"`;
-        localStorage.setItem("query",JSON.stringify(temp));
-        window.location.href="./product.html";
+		cat_title = document.getElementById('category-title');
+		localStorage.setItem('query', JSON.stringify(temp));
 
-       
-    }
-    
-    
-
-
+		window.location.href = './product.html';
+	} else {
+		cat_title = document.getElementById('category-title');
+		cat_title.innerText = `Search Result for "${temp}"`;
+		localStorage.setItem('query', JSON.stringify(temp));
+		window.location.href = './product.html';
+	}
 }
 
 // creating debouncing function for search functionality
 let id;
+
 function  debounce(fun,time){
     if(id)
     {
@@ -614,4 +604,5 @@ function  debounce(fun,time){
     id = setTimeout(function () {
         fun()
     }, time)
+
 }

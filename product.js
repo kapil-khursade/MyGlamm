@@ -1,8 +1,12 @@
 // This page will provide all the necessary js for product.html and the function mentioned on it.
 
 let backBTN=JSON.parse(localStorage.getItem("backBTN")) || 0;
-let query=(localStorage.getItem("query")) || "";
-main(query)
+
+// reade note
+let query=JSON.parse(localStorage.getItem("query") )|| "";
+// JSOn requred hai back button k liye
+
+main(query);
 
 let data;
 // function "main" for fetching data using api link with "query" argument;

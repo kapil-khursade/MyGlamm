@@ -20,7 +20,7 @@ nav&foot . -->
     integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="./nav&foot.css">
+    <link rel="stylesheet" href="./nav2.css">
 
 </head>
 
@@ -28,10 +28,10 @@ nav&foot . -->
 
 <body>
     <!-- navbar div start -->
-    <div>
+    <div id="navbar">
     </div>
     <!-- navbar div end -->
-
+    <div id="top_height"></div>
     <!-- productDetail page start -->
     <div>
 
@@ -80,7 +80,7 @@ nav&foot . -->
                 <div id="shade_color-div"></div>
 
                 <div id="addToCart-div">
-                   <button class="BTN" onclick="CartpenPopup()" id="addToCart"><span class="material-symbols-rounded"> shopping_bag </span>ADD TO BAG</button>
+                   <button class="BTN" onclick="CartpenPopup()" id="addToCart">ADD TO BAG</button>
                    <p>FREE GIFT ON PURCHASE!</p>
                 </div>
 
@@ -156,9 +156,12 @@ nav&foot . -->
 
 <script src="./productDetail.js"></script>
 <script type="module">
-	import { footer } from './nav&foot.js';
+	import { navbar, footer } from './nav&foot.js';
 
+	let nav = document.getElementById('navbar');
+	nav.innerHTML = navbar();
 	let foot = document.getElementById('footer');
 
 	foot.innerHTML = footer();
 </script>
+<script src="./sign&login.js" type="module"></script>

@@ -1,3 +1,6 @@
+#top_height{
+  height: 140px;
+}
 #nav-tag,
 #nav-tag > p {
   /* border: 1px solid red; */
@@ -354,10 +357,14 @@
   position: relative;
 }
 
+/* #addToCart{
+  text-align: center;
+} */
+
 /* ICON INSIDE ADD TO CART BUTTON */
-.material-symbols-rounded {
+/* #addToCart>.material-symbols-rounded { */
   /* Font & Text */
-  font-family: din-2014, sans-serif;
+  /* font-family: din-2014, sans-serif;
   font-size: 24px;
   font-style: italic;
   font-weight: 600;
@@ -366,12 +373,12 @@
   text-align: center;
   color: rgb(255, 255, 255);
   /* Positioning */
-  position: absolute;
+  /* position: absolute;
   top: 9px;
   bottom: 3.5625px;
   right: 128.031px;
   left: 18px;
-}
+}  */
 
 #cashback-title {
   /* Font & Text */
@@ -547,10 +554,11 @@
 
 .CartpopupBox{
   background-color: white;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   margin-top: 100px;
   width: 440px;
   height: 670px;
+  z-index: 4;
   position: absolute;
   top:500px;
   right:-500px;

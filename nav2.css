@@ -1,9 +1,9 @@
 #navbar {
     position: fixed;
     width: 100%;
-    height: 131.5px;
+    height: 138.5px;
     background-color: white;
-    margin: 0 -5px 10px -5px;
+    margin: 0 -5px 10px 0px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     padding: 0;
     top: 10px;
@@ -18,7 +18,7 @@
 
 #navbar>div:first-child>div {
     margin: auto;
-    padding-top: 5px;
+    padding-top: 0px;
     width: 1120px;
     display: flex;
     justify-content: space-between;
@@ -28,7 +28,11 @@
     font-weight: 600;
     color: #FF9797;
     font-size: 11px;
-    padding-top: 3px;
+    margin-top: 12px;
+}
+
+#navbar>div:first-child>div>div>p {
+    margin-top: 10px;
 }
 
 #navbar>div:first-child>div>div>.navImg {
@@ -182,16 +186,88 @@
 #navbar .nav_1_contents>p:hover,
 #navbar .nav_1_heading:hover {
     border-bottom: 3px solid #FF9797;
-    margin-bottom: -8px;
+    margin-bottom: 2px;
 
 }
 
 #navbar .options {
-    width: 1120px;
+    width: 1130px;
     background-color: white;
     position: absolute;
-    left: 12.8%;
-    top: 131.95px;
+    left: -75px;
+    top: 44.1px;
+    z-index: 1;
+    display: none;
+    padding: 15px;
+    min-height: 30vh;
+}
+
+#navbar .dropdown:nth-child(3) .options {
+    width: 1130px;
+    background-color: white;
+    position: absolute;
+    left: -164px;
+    top: 44.1px;
+    z-index: 1;
+    display: none;
+    padding: 15px;
+    min-height: 30vh;
+}
+
+#navbar .dropdown:nth-child(4) .options {
+    width: 1130px;
+    background-color: white;
+    position: absolute;
+    left: -270px;
+    top: 44.1px;
+    z-index: 1;
+    display: none;
+    padding: 15px;
+    min-height: 30vh;
+}
+
+#navbar .dropdown:nth-child(5) .options {
+    width: 1130px;
+    background-color: white;
+    position: absolute;
+    left: -376px;
+    top: 44.1px;
+    z-index: 1;
+    display: none;
+    padding: 15px;
+    min-height: 30vh;
+}
+
+#navbar .dropdown:nth-child(6) .options {
+    width: 1130px;
+    background-color: white;
+    position: absolute;
+    left: -527px;
+    top: 44.1px;
+    z-index: 1;
+    display: none;
+    padding: 15px;
+    min-height: 30vh;
+}
+
+#navbar .dropdown:nth-child(7) .options {
+    width: 1130px;
+    background-color: white;
+    position: absolute;
+    left: -646.5px;
+    top: 44.1px;
+    z-index: 1;
+    display: none;
+    padding: 15px;
+    min-height: 30vh;
+}
+
+#navbar .dropdown:nth-child(8) .options {
+    width: 1130px;
+    background-color: white;
+    position: absolute;
+    left: -747.5px;
+    top: 44.1px;
     z-index: 1;
     display: none;
     padding: 15px;
@@ -202,6 +278,7 @@
     display: flex;
     /* To dim everything else during this event*/
     box-shadow: 0 714px 0 100vh rgba(0, 0, 0, .4);
+    position: absolute;
 }
 
 #navbar .options>div {
@@ -304,7 +381,7 @@
 #navbar .nav_1_heading {
     color: #FFAFAF;
     font-weight: 600;
-    margin-bottom: -5px;
+    margin-bottom: 5px;
 }
 
 #navbar .options>div:first-child {
@@ -312,7 +389,7 @@
 }
 
 #navbar .nav_1_heading~p {
-    margin-bottom: -5px;
+    margin-bottom: 5px;
 }
 
 /*Pop Up CSS starts from here*/
@@ -663,7 +740,6 @@
     margin-bottom: -5px;
 }
 
-/* 
 #message_icon {
     width: 60px;
     height: 60px;
@@ -676,4 +752,4 @@
     padding-left: 1.35%;
     color: white;
     cursor: pointer;
-} */
+}
