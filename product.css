@@ -9,6 +9,7 @@
 } */
 #top_height{
   height: 140px;
+  z-index: 4;
 }
 /* main title */
 #category-title {
@@ -58,9 +59,9 @@
 
 
 /* item decription, title, price shared common property */
-#product-contianer p,
-#product-contianer h3,
-#product-contianer h2 {
+#product-contianer>p,
+#product-contianer>h3,
+#product-contianer>h2 {
   text-align: left;
   width: 85%;
   /* border: 1px solid red; */
@@ -69,13 +70,13 @@
 }
 
 /* item title */
-#product-contianer h3 {
+#product-contianer>h3 {
   font-weight: bold;
   font-size: 16px;
 }
 
 /* item price */
-#product-contianer h2 {
+#product-contianer>h2 {
   margin-top: 10%;
   font-size: 25px;
   font-weight: bold;

@@ -117,6 +117,7 @@ function displayDetails(data)
           let desc = document.querySelector('#description');
                 desc.innerText=data.description;
           let write_review = document.querySelector('#write-review');
+          
 
 // add to cart event listner
 
@@ -148,12 +149,15 @@ function displayDetails(data)
     rightBox.append(offer_div,desc,write_review)
     document.getElementById("leftBox").append(img)
 
+
+    recentPage.addEventListener("click",function(){
+      localStorage.setItem("backBTN",JSON.stringify("1"));
+      localStorage.setItem("query",JSON.stringify("data.product_type"));
+        window.location.href="./product.html";
+    })
 }
 
-recentPage.addEventListener("click",function(){
-  localStorage.setItem("backBTN",JSON.stringify("1"));
-    window.location.href="./product.html";
-})
+
 
 
 let Cartpopup = document.getElementById("Cartpopup");

@@ -1,3 +1,6 @@
+#top_height{
+  height: 140px;
+}
 #nav-tag,
 #nav-tag > p {
   /* border: 1px solid red; */
@@ -547,10 +550,11 @@
 
 .CartpopupBox{
   background-color: white;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   margin-top: 100px;
   width: 440px;
   height: 670px;
+  z-index: 4;
   position: absolute;
   top:500px;
   right:-500px;
