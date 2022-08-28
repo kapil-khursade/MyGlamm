@@ -84,4 +84,18 @@
     })
 </script>
 
+<script>
+    // Auto Fill 
+    let addData = JSON.parse(localStorage.getItem("addressData"))||"";
+    addData = addData[0]
+    if(addData!=""){
+        document.getElementById("name").value = addData.name;
+        document.getElementById("number").value = addData.number;
+        document.getElementById("email").value = addData.email;
+        document.getElementById("flat").value = addData.flat;
+        document.getElementById("street").value = addData.street;
+        document.getElementById("neighbour").value = addData.neighbour;
+    }
+</script>
+
 
