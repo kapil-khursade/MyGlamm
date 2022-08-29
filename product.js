@@ -1,19 +1,19 @@
 // This page will provide all the necessary js for product.html and the function mentioned on it.
 
-let backBTN=JSON.parse(localStorage.getItem("backBTN")) || 0;
+let backBTN=(localStorage.getItem("backBTN")) || 0;
 
 // reade note
-let query=JSON.parse(localStorage.getItem("query") )|| "";
+let query=(localStorage.getItem("query") )|| "";
 // JSOn requred hai back button k liye
 
 main(query);
 
 let data;
 // function "main" for fetching data using api link with "query" argument;
-async function main(catchquery) {
+async function main(query) {
     
     try {
-        let res = await fetch(`http://makeup-api.herokuapp.com/api/v1/products.json?product_type=${catchquery}`)
+        let res = await fetch(`http://makeup-api.herokuapp.com/api/v1/products.json?product_type=${query}`)
         // let res = await fetch(`https://makeup-api.herokuapp.com/api/v1/products.json`)
 
 
