@@ -1,0 +1,19 @@
+#checkout-container{
+    height: 740px;
+    width:70%;
+    border: 1px dashed red;
+    margin: auto;
+    display:flex
+}
+#checkout-container>div{
+   width:50%;
+   height: 100%;
+   border: 1px solid sandybrown; 
+}
+#checkout-heading-div{
+text-align: center;
+}
+#checkout-heading-div>h1{
+    font-size: 28px;
+}
+
