@@ -4,5 +4,5 @@ The members of 5 day group project were 1.ALok Singh 2.Nitin Gautam 3.Nitin 4.Ta
 Kapil Khursade worked as Team Lead with resposiblities of developing Home Page and Payment Gateway Pages.
 Tarun Kumar Sao was responsible for development of importable and dynamic Navbar and Fotter.
 Nitin Gautam was responsible for developing product pages that was mkaing the API call.
-Alok Sing developed the Profile page and My oreder Page.
+Alok Singh developed the Profile page, Address add page and My order Page.
 We finally did the virtual projcet presentation.
