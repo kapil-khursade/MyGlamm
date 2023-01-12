@@ -40,5 +40,8 @@ A Clone of MyGlamm, an Indian e-commerce company that sells cosmetics and person
 * Payment With OTP generation
 * Log out
 
+## Deploy Link
+[Link](https://myglammclonecw.netlify.app)
+
 ## Project Demonstration Vedio
 [Vedio](https://drive.google.com/file/d/1UBfQ9ZFNLipz3d53zPg3zuvYU-kGotWU/view?usp=sharing)
